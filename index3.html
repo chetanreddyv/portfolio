@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chetan Valluru | AI/ML Data Scientist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pastelBlue: '#A7C7E7',
+                        pastelGreen: '#C1E1C1',
+                        pastelPurple: '#C3B1E1',
+                        pastelPink: '#F8C8DC',
+                        pastelYellow: '#FDFD96',
+                        darkBlue: '#1E3A8A',
+                        terminalGreen: '#4AF626',
+                        terminalBlack: '#0D0208',
+                        terminalGray: '#1A1A1A',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    animation: {
+                        'cursor-blink': 'cursor-blink 1s infinite',
+                        'typewriter': 'typewriter 4s steps(40) 1s 1 normal both',
+                    },
+                    keyframes: {
+                        'cursor-blink': {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0' },
+                        },
+                        'typewriter': {
+                            '0%': { width: '0' },
+                            '100%': { width: '100%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        
+        .ai-particle {
+            position: absolute;
+            background: rgba(167, 199, 231, 0.6);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-pill {
+            transition: all 0.2s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: scale(1.05);
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.5rem;
+            top: 2.5rem;
+            height: calc(100% - 1rem);
+            width: 2px;
+            background: #A7C7E7;
+        }
+        
+        .neural-network {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.1;
+        }
+        
+        .neural-path {
+            stroke: #3b82f6;
+            stroke-width: 1;
+            fill: none;
+        }
+        
+        .neural-node {
+            fill: #8b5cf6;
+        }
+        
+        .terminal {
+            font-family: 'Fira Code', monospace;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .terminal-header {
+            background-color: #333;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+        }
+        
+        .terminal-body {
+            background-color: #0D0208;
+            color: #4AF626;
+            padding: 16px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        
+        .terminal-prompt {
+            color: #4AF626;
+        }
+        
+        .terminal-command {
+            color: #4AF626;
+            margin-bottom: 8px;
+        }
+        
+        .terminal-output {
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #4AF626;
+            animation: typewriter 4s steps(40) 1s 1 normal both, cursor-blink 1s infinite;
+        }
+        
+        .about-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(247, 250, 252, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .glow-effect {
+            box-shadow: 0 0 15px rgba(74, 246, 38, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- AI Particles Background -->
+    <div id="particles"></div>
+    
+    <!-- Neural Network Background -->
+    <svg class="neural-network" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        <path class="neural-path" d="M100,100 Q250,50 400,100 T700,100" />
+        <path class="neural-path" d="M100,200 Q250,150 400,200 T700,200" />
+        <path class="neural-path" d="M100,300 Q250,250 400,300 T700,300" />
+        <path class="neural-path" d="M100,400 Q250,350 400,400 T700,400" />
+        <path class="neural-path" d="M100,500 Q250,450 400,500 T700,500" />
+        <path class="neural-path" d="M100,600 Q250,550 400,600 T700,600" />
+        <path class="neural-path" d="M100,700 Q250,650 400,700 T700,700" />
+        <path class="neural-path" d="M100,800 Q250,750 400,800 T700,800" />
+        
+        <circle class="neural-node" cx="100" cy="100" r="5" />
+        <circle class="neural-node" cx="400" cy="100" r="5" />
+        <circle class="neural-node" cx="700" cy="100" r="5" />
+        
+        <circle class="neural-node" cx="100" cy="300" r="5" />
+        <circle class="neural-node" cx="400" cy="300" r="5" />
+        <circle class="neural-node" cx="700" cy="300" r="5" />
+        
+        <circle class="neural-node" cx="100" cy="500" r="5" />
+        <circle class="neural-node" cx="400" cy="500" r="5" />
+        <circle class="neural-node" cx="700" cy="500" r="5" />
+        
+        <circle class="neural-node" cx="100" cy="700" r="5" />
+        <circle class="neural-node" cx="400" cy="700" r="5" />
+        <circle class="neural-node" cx="700" cy="700" r="5" />
+    </svg>
+    
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white bg-opacity-80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Chetan Valluru</div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#terminal" class="text-gray-700 hover:text-blue-600 transition">Terminal</a>
+                    <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                    <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </nav>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Chetan Valluru</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
+                    AI/ML Engineer | Data Scientist | LLM Specialist
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                    Passionate about LLMs and AIML, committed to innovating with emerging technologies. 
+                    I combine cutting-edge research with real-world applications to deliver data-driven solutions.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-pastelBlue to-pastelPurple rounded-full flex items-center justify-center shadow-xl">
+                        <div class="w-60 h-60 md:w-72 md:h-72 bg-white rounded-full flex items-center justify-center shadow-inner">
+                            <i class="fas fa-robot text-6xl md:text-8xl text-blue-600"></i>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-pastelGreen px-4 py-2 rounded-full shadow-md">
+                        <span class="font-medium">AI Enthusiast</span>
+                    </div>
+                    <div class="absolute -top-6 -right-6 bg-pastelPink px-4 py-2 rounded-full shadow-md">
+                        <span class="font-medium">LLM Expert</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Terminal Structure -->
+<div class="terminal mb-8">
+    <div class="terminal-header">
+        <div class="terminal-button bg-red-500"></div>
+        <div class="terminal-button bg-yellow-500"></div>
+        <div class="terminal-button bg-green-500"></div>
+    </div>
+    <div class="terminal-content">
+        <div class="command-line">
+            <span class="prompt">$</span>
+            <span class="text-white typing-effect" id="typing-text"></span>
+        </div>
+        <div class="text-green-400">> Welcome to Chetan's Portfolio</div>
+        <div class="text-green-400">> AI/ML Engineer & Data Scientist</div>
+        <div class="text-green-400">> Specializing in LLMs and Deep Learning</div>
+        <div class="text-blue-400 mt-4">Initializing systems...</div>
+        <div class="text-blue-400">Loading projects...</div>
+        <div class="text-blue-400">Ready to explore!</div>
+    </div>
+</div>
+
+<!-- Terminal CSS -->
+<style>
+    .terminal {
+        background-color: #011627;
+        border-radius: 8px;
+        font-family: 'Courier New', monospace;
+        position: relative;
+    }
+
+    .terminal-header {
+        height: 30px;
+        background-color: #1d3b53;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+    }
+
+    .terminal-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 6px;
+    }
+
+    .terminal-content {
+        padding: 15px;
+        overflow-x: auto;
+    }
+
+    .command-line {
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    .prompt {
+        color: #7fdbca;
+        margin-right: 10px;
+    }
+
+    .typing-effect {
+        border-right: 2px solid;
+        animation: blink 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+        from, to { border-color: transparent; }
+        50% { border-color: var(--primary); }
+    }
+</style>
+
+<!-- Terminal JavaScript -->
+<script>
+    // Typing effect for terminal
+    const texts = [
+        "python3 chetan_portfolio.py --skills=AI,ML,LLM",
+        "import chetan from 'data-scientist'",
+        "git clone https://github.com/chetanreddyv/portfolio.git",
+        "SELECT * FROM projects WHERE skills LIKE '%AI%'"
+    ];
+    let currentTextIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    
+    function typeText() {
+        const typingElement = document.getElementById('typing-text');
+        const currentText = texts[currentTextIndex];
+        
+        if (isDeleting) {
+            typingElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = 50;
+        } else {
+            typingElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+        }
+        
+        if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            typingSpeed = 1500;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            currentTextIndex = (currentTextIndex + 1) % texts.length;
+            typingSpeed = 500;
+        }
+        
+        setTimeout(typeText, typingSpeed);
+    }
+
+    // Initialize typing effect when page loads
+    window.addEventListener('load', function() {
+        setTimeout(typeText, 1000);
+    });
+</script> 
+    <!-- About Section - Redesigned -->
+    <section id="about" class="py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">About Me</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <!-- Profile Card -->
+                <div class="lg:w-1/3">
+                    <div class="about-card p-8 h-full">
+                        <div class="flex flex-col items-center text-center">
+                            <div class="w-40 h-40 bg-gradient-to-br from-pastelBlue to-pastelPurple rounded-full flex items-center justify-center mb-6">
+                                <div class="w-36 h-36 bg-white rounded-full flex items-center justify-center shadow-inner">
+                                    <i class="fas fa-user-astronaut text-5xl text-blue-600"></i>
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Chetan Valluru</h3>
+                            <p class="text-blue-600 font-medium mb-4">AI/ML Engineer | LLM Specialist</p>
+                            
+                            <div class="flex space-x-4 mb-6">
+                                <a href="https://github.com/chetanreddyv" target="_blank" class="bg-gray-100 hover:bg-gray-200 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-github text-gray-700"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/chetan-reddy-valluru-a087261b9/" target="_blank" class="bg-blue-100 hover:bg-blue-200 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-linkedin-in text-blue-600"></i>
+                                </a>
+                                <a href="mailto:valluruchetanreddy@gmail.com" class="bg-green-100 hover:bg-green-200 w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fas fa-envelope text-green-600"></i>
+                                </a>
+                            </div>
+                            
+                            <div class="w-full bg-gray-100 rounded-lg p-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-gray-700">AI Research</span>
+                                    <span class="text-sm font-bold text-blue-600">90%</span>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-blue-600 h-2 rounded-full" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full bg-gray-100 rounded-lg p-4 mt-3">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm font-medium text-gray-700">LLM Development</span>
+                                    <span class="text-sm font-bold text-purple-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-300 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- About Content -->
+                <div class="lg:w-2/3">
+                    <div class="about-card p-8 h-full">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-800">Hello! I'm Chetan</h3>
+                        <p class="text-gray-600 mb-6">
+                            A passionate Data Scientist with a Master's degree from Rutgers University, specializing in Large Language Models (LLMs) 
+                            and Artificial Intelligence. My work focuses on bridging the gap between cutting-edge AI research and practical, 
+                            real-world applications that drive business value.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                            <div class="bg-pastelBlue bg-opacity-20 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-graduation-cap text-blue-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800">Education</h4>
+                                </div>
+                                <div class="pl-10">
+                                    <div class="mb-3">
+                                        <h5 class="font-medium text-gray-800">M.S. Data Science</h5>
+                                        <p class="text-sm text-gray-600">Rutgers University (GPA: 3.65)</p>
+                                        <p class="text-xs text-gray-500">2023 - 2025</p>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-medium text-gray-800">B.Tech ECE with AI/ML</h5>
+                                        <p class="text-sm text-gray-600">VNR VJIET, India</p>
+                                        <p class="text-xs text-gray-500">2019 - 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-pastelGreen bg-opacity-20 p-4 rounded-lg">
+                                <div class="flex items-center mb-2">
+                                    <div class="bg-green-100 p-2 rounded-full mr-3">
+                                        <i class="fas fa-trophy text-green-600"></i>
+                                    </div>
+                                    <h4 class="font-semibold text-gray-800">Achievements</h4>
+                                </div>
+                                <div class="pl-10">
+                                    <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+                                        <li>1st Place, HackRU Fall-2024</li>
+                                        <li>Gold in Global Youth Scientist Challenge</li>
+                                        <li>Published AI/ML Research Paper</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-pastelPurple bg-opacity-20 p-4 rounded-lg">
+                            <div class="flex items-center mb-2">
+                                <div class="bg-purple-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-lightbulb text-purple-600"></i>
+                                </div>
+                                <h4 class="font-semibold text-gray-800">Philosophy</h4>
+                            </div>
+                            <div class="pl-10">
+                                <p class="text-gray-600 mb-3">
+                                    I believe in creating AI solutions that are not just technically advanced but also ethically responsible and 
+                                    practically valuable. My approach combines rigorous research with a focus on real-world impact.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Ethical AI</span>
+                                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded-full">Practical Innovation</span>
+                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Research-Driven</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Technical Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Core Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-pastelBlue p-3 rounded-full mr-4">
+                            <i class="fas fa-microchip text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Core Competencies</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Python</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">SQL</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">TensorFlow</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">PyTorch</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">NLP</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">Predictive Modeling</span>
+                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Deep Learning</span>
+                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">AI Development</span>
+                        <span class="skill-pill bg-pink-100 text-pink-800 px-4 py-2 rounded-full font-medium">Statistical Analysis</span>
+                    </div>
+                </div>
+                
+                <!-- Tools & Technologies -->
+                <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-pastelGreen p-3 rounded-full mr-4">
+                            <i class="fas fa-tools text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold text-gray-800">Tools & Technologies</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium">Git</span>
+                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium">MongoDB</span>
+                        <span class="skill-pill bg-yellow-100 text-yellow-800 px-4 py-2 rounded-full font-medium">MySQL</span>
+                        <span class="skill-pill bg-red-100 text-red-800 px-4 py-2 rounded-full font-medium">Scikit-Learn</span>
+                        <span class="skill-pill bg-red-100 text-red-800 px-4 py-2 rounded-full font-medium">Pandas</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">OpenCV</span>
+                        <span class="skill-pill bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">PydanticAI</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">LLM APIs</span>
+                        <span class="skill-pill bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">LLM Evaluation</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">AI Deployment</span>
+                        <span class="skill-pill bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">RAG</span>
+                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">LoRA</span>
+                        <span class="skill-pill bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">SLM</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Specializations -->
+            <div class="bg-white p-8 rounded-xl shadow-lg card-hover">
+                <div class="flex items-center mb-6">
+                    <div class="bg-pastelPurple p-3 rounded-full mr-4">
+                        <i class="fas fa-star text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800">AI/ML Specializations</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-pastelBlue bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-brain text-blue-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">LLM Optimization</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Expertise in fine-tuning and optimizing large language models for efficiency, security, and practical applications.
+                        </p>
+                    </div>
+                    <div class="bg-pastelGreen bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-chart-line text-green-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">Predictive Analytics</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            Building robust predictive models for business applications, time series analysis, and forecasting.
+                        </p>
+                    </div>
+                    <div class="bg-pastelPink bg-opacity-20 p-6 rounded-lg">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-pink-100 p-2 rounded-full mr-3">
+                                <i class="fas fa-robot text-pink-600"></i>
+                            </div>
+                            <h4 class="font-semibold text-gray-800">AI Deployment</h4>
+                        </div>
+                        <p class="text-gray-600">
+                            End-to-end deployment of AI solutions with focus on scalability, efficiency, and real-world impact.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-6 bg-pastelGreen bg-opacity-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-robot text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">BetterLlama</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">LLM</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Distilled and fine-tuned Llama 3.2 with LoRa for enhanced local processing, efficiency, security, and privacy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">LoRA</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">8-bit Quantization</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Ethical AI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">Sep 2023 - May 2025</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-chess text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">ChessGPT</h3>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full font-medium">NLP</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            AI chess transformer model treating moves as language, achieving 10% win / 69% draw rate against Stockfish.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Transformers</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">LoRA Fine-tuning</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">NLP</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2024</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-yellow-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-train text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">NJ Transit Assistant</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">ML</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Rail delay prediction pipeline with AI chatbot powered by RAG, projected to reduce delays by 10%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Random Forest</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">RAG</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Predictive Maintenance</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2024</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-purple-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-taxi text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">NYC Taxi Analysis</h3>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium">Data Science</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Regression analysis on NYC taxi data to optimize driver profitability and increase tip prediction accuracy by 15%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Regression</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">PowerBI</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Data Visualization</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-red-500 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-database text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Twitter Hybrid DB</h3>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full font-medium">Database</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Hybrid database system using MongoDB and MySQL enhancing social media data query performance by 25%.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">MongoDB</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">MySQL</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">ETL</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
+                        <i class="fas fa-lungs text-6xl text-white opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">Respiratory Disease Classifier</h3>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-medium">Deep Learning</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Fine-tuned ResNet50 achieving 95% accuracy with GUI for medical practitioners.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">ResNet50</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Medical AI</span>
+                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">GUI</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500">2023</span>
+                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                                View Details <i class="fas fa-arrow-right ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Experience & Education</h2>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- Experience Timeline -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800 flex items-center">
+                        <div class="bg-pastelBlue p-3 rounded-full mr-4">
+                            <i class="fas fa-briefcase text-blue-600"></i>
+                        </div>
+                        Professional Experience
+                    </h3>
+                    
+                    <div class="relative">
+                        <!-- Item 1 -->
+                        <div class="timeline-item relative pl-16 pb-10">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-blue-600 border-4 border-blue-100 flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-white text-xs"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-gray-800">Machine Learning & Statistics Grader</h4>
+                                    <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">Part-time</span>
+                                </div>
+                                <div class="text-gray-600 mb-3">
+                                    <span class="font-medium">Rutgers University</span> | Sep 2023 - May 2024
+                                </div>
+                                <p class="text-gray-600">
+                                    Graded statistical inference, hypothesis testing and ML assignments, guided students in applying ML and statistical methods.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item relative pl-16 pb-10">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-green-600 border-4 border-green-100 flex items-center justify-center">
+                                <i class="fas fa-certificate text-white text-xs"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-gray-800">British Airways Data Science Virtual Internship</h4>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-medium">Internship</span>
+                                </div>
+                                <div class="text-gray-600 mb-3">
+                                    <span class="font-medium">Forage</span> | Oct 2024
+                                </div>
+                                <p class="text-gray-600">
+                                    Analyzed customer reviews and built predictive models to identify buying patterns, improving marketing strategies by 20%.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Education Timeline -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-gray-800 flex items-center">
+                        <div class="bg-pastelPurple p-3 rounded-full mr-4">
+                            <i class="fas fa-university text-purple-600"></i>
+                        </div>
+                        Education
+                    </h3>
+                    
+                    <div class="relative">
+                        <!-- Item 1 -->
+                        <div class="timeline-item relative pl-16 pb-10">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-purple-600 border-4 border-purple-100 flex items-center justify-center">
+                                <i class="fas fa-scroll text-white text-xs"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-gray-800">Master of Science in Data Science</h4>
+                                    <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full font-medium">GPA: 3.65</span>
+                                </div>
+                                <div class="text-gray-600 mb-3">
+                                    <span class="font-medium">Rutgers University, New Brunswick</span> | Sep 2023 - May 2025
+                                </div>
+                                <p class="text-gray-600">
+                                    Specialized in Machine Learning, Deep Learning, and Large Language Models with research focus on LLM optimization.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="timeline-item relative pl-16">
+                            <div class="absolute left-0 top-0 w-8 h-8 rounded-full bg-indigo-600 border-4 border-indigo-100 flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-white text-xs"></i>
+                            </div>
+                            <div class="bg-white p-6 rounded-xl shadow-md">
+                                <div class="flex justify-between items-start mb-2">
+                                    <h4 class="text-lg font-bold text-gray-800">Bachelor's in Electronics & Communications with AI/ML</h4>
+                                </div>
+                                <div class="text-gray-600 mb-3">
+                                    <span class="font-medium">VNR VJIET, India</span> | Aug 2019 - May 2023
+                                </div>
+                                <p class="text-gray-600">
+                                    Focused on integrating AI/ML with electronics systems, published research on respiratory disease classification using deep learning.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications Section -->
+    <section class="py-16 px-6 bg-pastelPurple bg-opacity-10">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Certifications</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Certification 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg flex items-start card-hover">
+                    <div class="bg-blue-100 p-4 rounded-lg mr-6">
+                        <i class="fas fa-certificate text-blue-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Microsoft Azure AI Engineer Associate</h3>
+                        <p class="text-gray-600 mb-3">Microsoft (in progress)</p>
+                        <p class="text-gray-600 text-sm">
+                            Gaining expertise in designing and implementing AI solutions using Microsoft Azure.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Certification 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-lg flex items-start card-hover">
+                    <div class="bg-green-100 p-4 rounded-lg mr-6">
+                        <i class="fas fa-plane text-green-600 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">British Airways Data Science Virtual Internship</h3>
+                        <p class="text-gray-600 mb-3">Forage (Oct 2024)</p>
+                        <p class="text-gray-600 text-sm">
+                            Analyzed customer behavior and built predictive models to improve marketing strategies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-gradient-to-br from-pastelBlue to-pastelPurple">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white">Get In Touch</h2>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <!-- Contact Info -->
+                    <div class="bg-gray-50 p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Email</h4>
+                                    <a href="mailto:valluruchetanreddy@gmail.com" class="text-blue-600 hover:underline">valluruchetanreddy@gmail.com</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Phone</h4>
+                                    <a href="tel:7325327879" class="text-gray-600">(732) 532-7879</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Location</h4>
+                                    <p class="text-gray-600">New Brunswick, NJ</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium text-gray-800 mb-4">Connect With Me</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/chetanreddyv" target="_blank" class="bg-gray-200 hover:bg-gray-300 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-github text-gray-700"></i>
+                                </a>
+                                <a href="https://linkedin.com/in/chetan-reddy-valluru-a087261b9/" target="_blank" class="bg-blue-100 hover:bg-blue-200 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-linkedin-in text-blue-600"></i>
+                                </a>
+                                <a href="#" class="bg-blue-50 hover:bg-blue-100 w-10 h-10 rounded-full flex items-center justify-center">
+                                    <i class="fab fa-twitter text-blue-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Form -->
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Send Me a Message</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="text-2xl font-bold gradient-text">Chetan Valluru</div>
+                    <p class="text-gray-400 mt-2">Data Scientist | AI/ML Engineer | LLM Specialist</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/chetanreddyv" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/chetan-reddy-valluru-a087261b9/" target="_blank" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Chetan Valluru. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Create AI particles
+        document.addEventListener('DOMContentLoaded', function() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('ai-particle');
+                
+                // Random size between 5 and 15px
+                const size = Math.random() * 10 + 5;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                
+                // Random position
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.1;
+                
+                // Random animation
+                const duration = Math.random() * 20 + 10;
+                particle.style.animation = `float ${duration}s infinite ease-in-out`;
+                
+                particlesContainer.appendChild(particle);
+            }
+            
+            // Add floating animation
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes float {
+                    0% {
+                        transform: translate(0, 0) rotate(0deg);
+                    }
+                    50% {
+                        transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) rotate(180deg);
+                    }
+                    100% {
+                        transform: translate(0, 0) rotate(360deg);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Terminal typewriter effect
+            const terminalCommands = [
+                "whoami",
+                "cat about.txt",
+                "ls skills/",
+                "find education/",
+                "./connect --social"
+            ];
+            
+            let currentCommand = 0;
+            const terminalPrompt = document.querySelector('.terminal-command:last-child .typewriter');
+            
+            function typeNextCommand() {
+                if (currentCommand < terminalCommands.length) {
+                    terminalPrompt.textContent = terminalCommands[currentCommand];
+                    terminalPrompt.style.animation = 'typewriter 2s steps(30) 1s 1 normal both, cursor-blink 1s infinite';
+                    currentCommand++;
+                    
+                    setTimeout(() => {
+                        terminalPrompt.style.animation = 'none';
+                        setTimeout(() => {
+                            terminalPrompt.style.animation = 'cursor-blink 1s infinite';
+                            typeNextCommand();
+                        }, 1000);
+                    }, 3000);
+                } else {
+                    currentCommand = 0;
+                    setTimeout(typeNextCommand, 2000);
+                }
+            }
+            
+            setTimeout(typeNextCommand, 1000);
+        });
+    </script>
+</body>
+</html>
