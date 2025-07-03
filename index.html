@@ -217,6 +217,7 @@
                     <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
                     <a href="#terminal" class="text-gray-700 hover:text-blue-600 transition">Terminal</a>
                     <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                    <a href="#product" class="text-gray-700 hover:text-blue-600 transition">Product</a>
                     <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
                     <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                 </nav>
@@ -556,39 +557,55 @@
             </div>
         </div>
     </section>
-    
+
+
+     <!-- Product Spotlight Section -->
+     <section id="product" class="relative py-32 px-6 overflow-hidden">
+        <!-- Background Image -->
+        <img src="Taylorprev.png" alt="Taylor AI Product Background" class="absolute inset-0 w-full h-full object-cover z-0">
+        <div class="absolute inset-0 bg-slate-900/50 z-10"></div>
+
+        <div class="container mx-auto relative z-20 flex items-center justify-center">
+            <!-- Glassmorphism Content Card -->
+            <div class="bg-slate-800/50 backdrop-blur-lg p-8 sm:p-12 rounded-2xl shadow-2xl border border-white/20 max-w-3xl text-center">
+                <span class="bg-amber-400/20 text-amber-300 text-xs px-4 py-1 rounded-full font-semibold mb-4 inline-block shadow-md tracking-wide uppercase border border-amber-400/30">
+                    Featured AI Product
+                </span>
+                <h3 class="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-amber-300 to-amber-500 bg-clip-text text-transparent drop-shadow-lg">
+                    Taylor: Your AI Career Stylist
+                </h3>
+                <p class="text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
+                    A full-stack, in-browser AI that <span class="font-bold text-amber-300">scrapes</span>, <span class="font-bold text-amber-300">analyzes</span>, and <span class="font-bold text-amber-300">generates</span> tailored resumes & cover letters for any job—instantly.
+                </p>
+                <div class="flex flex-wrap gap-3 justify-center mb-10">
+                    <span class="skill-pill bg-slate-900/70 border border-slate-700 text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm"><i class="fas fa-code mr-2 text-amber-400"></i>JavaScript</span>
+                    <span class="skill-pill bg-slate-900/70 border border-slate-700 text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm"><i class="fas fa-robot mr-2 text-amber-400"></i>LLM Integration</span>
+                    <span class="skill-pill bg-slate-900/70 border border-slate-700 text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm"><i class="fas fa-search mr-2 text-amber-400"></i>Web Scraping</span>
+                    <span class="skill-pill bg-slate-900/70 border border-slate-700 text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm"><i class="fas fa-layer-group mr-2 text-amber-400"></i>Full-Stack</span>
+                    <span class="skill-pill bg-slate-900/70 border border-slate-700 text-slate-300 px-4 py-2 rounded-full font-medium shadow-sm"><i class="fas fa-lightbulb mr-2 text-amber-400"></i>Prompt Engineering</span>
+                </div>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                    <a href="https://chetanreddyv.github.io/Taylor/" target="_blank"
+                       class="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white px-8 py-4 rounded-lg font-bold text-lg shadow-lg transition-transform transform hover:scale-105 flex items-center gap-3 border-2 border-white/20 w-full sm:w-auto justify-center">
+                        <i class="fas fa-magic"></i>
+                        Try Taylor Live
+                        <i class="fas fa-external-link-alt ml-2 text-white/80"></i>
+                    </a>
+                    <a href="https://github.com/chetanreddyv/Taylor" target="_blank"
+                       class="bg-slate-900/80 hover:bg-slate-700/80 text-slate-200 px-8 py-4 rounded-lg font-semibold text-lg shadow-md border border-slate-700 transition w-full sm:w-auto justify-center flex items-center gap-2">
+                        <i class="fab fa-github"></i> View Source
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Projects Section -->
     <section id="projects" class="py-16 px-6 bg-pastelGreen bg-opacity-10">
         <div class="container mx-auto">
             <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Featured Projects</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-r from-pink-500 to-red-600 flex items-center justify-center">
-                        <i class="fas fa-brain text-6xl text-white opacity-80"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold text-gray-800">Taylor: Your AI Career Stylist</h3>
-                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full font-medium">AI</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">
-                          interactive overlay onto job listing pages, to AI-personalized resumes and cover letters.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">Full Stack</span>
-                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">LLM</span>
-                            <span class="text-xs bg-gray-100 text-gray-800 px-2 py-1 rounded">GUI</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">2025</span>
-                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- Project betterllama -->
                 <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover">
                     <div class="h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
@@ -609,9 +626,9 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">2025</span>
-                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                            <a href="https://github.com/chetanreddyv/BetterLlama" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
                                 View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -635,11 +652,9 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">2024</span>
-               
-                                <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                            <a href="https://github.com/chetanreddyv/ChessGPT" target="_blank" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
                                 View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                 
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -693,9 +708,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">2023</span>
-                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
+                   
                         </div>
                     </div>
                 </div>
@@ -720,9 +733,7 @@
                         </div>
                         <div class="flex justify-between items-center">
                             <span class="text-sm text-gray-500">2024</span>
-                            <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">
-                                View Details <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
+                         
                         </div>
                     </div>
                 </div>
