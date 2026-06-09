@@ -2,133 +2,396 @@
 <html class="scroll-smooth" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Chetan Valluru | AI Engineer &amp; Data Scientist</title>
+<title>Chetan Valluru | AI Engineer</title>
 
-<!-- SEO & Social (Transferred from Old) -->
-<meta name="description" content="Data Scientist specializing in LLM agents, RAG systems, and on-device ML. Expert in generative AI, NLP, MLOps, and model optimization.">
+<!-- SEO & Social -->
+<meta name="description" content="AI Engineer specializing in LLM agents, RAG systems, knowledge graphs, and on-device ML. Expert in generative AI, NLP, MLOps, and model optimization.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="/">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Chetan Valluru — Data Scientist & AI Engineer">
-<meta property="og:description" content="Building production LLM agents, RAG systems, and optimized ML pipelines. Reduced costs 60%, accelerated insights 80%, achieved 99.9% accuracy.">
-<meta property="og:image" content="top-view-shot-people-near-boat-sand-varkala-beach.jpg">
+<meta property="og:title" content="Chetan Valluru — AI Engineer">
+<meta property="og:description" content="Building production LLM agents, RAG systems, and optimized ML pipelines. Reduced costs 60%, accelerated insights 80%.">
 <meta property="og:url" content="/">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Chetan Valluru — Data Scientist">
-<meta name="twitter:description" content="Production LLMs, RAG systems, NLP, MLOps. Building AI that ships.">
-<meta name="twitter:image" content="top-view-shot-people-near-boat-sand-varkala-beach.jpg">
+<meta name="twitter:title" content="Chetan Valluru — AI Engineer">
+<meta name="twitter:description" content="Production LLMs, RAG systems, knowledge graphs, MLOps. Building AI that ships.">
 
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 <script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              colors: {
-                "tertiary": "#565f68",
-                "on-primary": "#ffffff",
-                "surface": "#f6fafe",
-                "on-error": "#ffffff",
-                "on-surface": "#171c1f",
-                "inverse-surface": "#2c3134",
-                "on-surface-variant": "#464554",
-                "outline-variant": "#c7c4d7",
-                "tertiary-fixed": "#dae3ed",
-                "surface-bright": "#f6fafe",
-                "primary-fixed-dim": "#c0c1ff",
-                "secondary-fixed-dim": "#d0bcff",
-                "surface-variant": "#dfe3e7",
-                "on-secondary-fixed-variant": "#5516be",
-                "on-tertiary-container": "#01060c",
-                "on-primary-container": "#fffbff",
-                "inverse-primary": "#c0c1ff",
-                "error-container": "#ffdad6",
-                "error": "#ba1a1a",
-                "secondary": "#6b38d4",
-                "on-error-container": "#93000a",
-                "surface-container-low": "#f0f4f8",
-                "surface-container-lowest": "#ffffff",
-                "primary-container": "#6063ee",
-                "on-primary-fixed": "#07006c",
-                "on-tertiary-fixed": "#141d24",
-                "surface-tint": "#494bd6",
-                "surface-container-highest": "#dfe3e7",
-                "secondary-fixed": "#e9ddff",
-                "background": "#f6fafe",
-                "secondary-container": "#8455ef",
-                "on-secondary": "#ffffff",
-                "surface-dim": "#d6dade",
-                "on-primary-fixed-variant": "#2f2ebe",
-                "primary": "#4648d4",
-                "on-tertiary-fixed-variant": "#3f4850",
-                "tertiary-container": "#6f7881",
-                "on-secondary-fixed": "#23005c",
-                "on-secondary-container": "#fffbff",
-                "surface-container-high": "#e4e9ed",
-                "primary-fixed": "#e1e0ff",
-                "on-background": "#171c1f",
-                "inverse-on-surface": "#edf1f5",
-                "on-tertiary": "#ffffff",
-                "outline": "#767586",
-                "surface-container": "#eaeef2",
-                "tertiary-fixed-dim": "#bec7d1"
-              },
-              fontFamily: {
-                "headline": ["Manrope"],
-                "body": ["Inter"],
-                "label": ["Inter"]
-              },
-              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-            },
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#4648d4",
+            "primary-container": "#6063ee",
+            "secondary": "#6b38d4",
+            "secondary-container": "#8455ef",
+            "tertiary": "#565f68",
+            "surface": "#f6fafe",
+            "surface-dim": "#d6dade",
+            "surface-container": "#eaeef2",
+            "surface-container-low": "#f0f4f8",
+            "surface-container-high": "#e4e9ed",
+            "surface-container-highest": "#dfe3e7",
+            "on-surface": "#171c1f",
+            "on-surface-variant": "#464554",
+            "outline": "#767586",
+            "outline-variant": "#c7c4d7",
+            "inverse-surface": "#2c3134",
+            "inverse-on-surface": "#edf1f5",
           },
-        }
-    </script>
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+          },
+        },
+      },
+    }
+</script>
 <style>
-        .neumorphic-raised {
-            background: #f6fafe;
-            box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+    /* ========== CORE DESIGN TOKENS ========== */
+    :root {
+        --gradient-primary: linear-gradient(135deg, #4648d4 0%, #6b38d4 50%, #8455ef 100%);
+        --gradient-hero-bg: linear-gradient(135deg, #0f0c29 0%, #1a1340 40%, #24243e 100%);
+        --gradient-accent: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        --shadow-elevated: 0 20px 60px rgba(70, 72, 212, 0.15), 0 8px 24px rgba(0,0,0,0.08);
+        --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+    }
+
+    /* ========== HERO SECTION ========== */
+    .hero-section {
+        background: var(--gradient-hero-bg);
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(ellipse at 20% 50%, rgba(70, 72, 212, 0.15) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 20%, rgba(132, 85, 239, 0.1) 0%, transparent 50%),
+                    radial-gradient(ellipse at 50% 80%, rgba(107, 56, 212, 0.08) 0%, transparent 50%);
+        animation: heroGlow 8s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow {
+        0% { transform: translate(0, 0) scale(1); }
+        100% { transform: translate(-2%, -1%) scale(1.05); }
+    }
+
+    /* ========== ANIMATED GRID BACKGROUND ========== */
+    .hero-grid {
+        position: absolute;
+        inset: 0;
+        background-image: 
+            linear-gradient(rgba(70, 72, 212, 0.06) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(70, 72, 212, 0.06) 1px, transparent 1px);
+        background-size: 60px 60px;
+        mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+        -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 70%);
+    }
+
+    /* ========== COUNTER ANIMATION ========== */
+    .metric-card {
+        background: rgba(255, 255, 255, 0.04);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 1.25rem;
+        padding: 1.75rem 2rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .metric-card:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px rgba(70, 72, 212, 0.2);
+    }
+    .metric-number {
+        font-size: 2.75rem;
+        font-weight: 800;
+        font-family: 'Manrope', sans-serif;
+        background: linear-gradient(135deg, #c0c1ff 0%, #e9ddff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: 1;
+    }
+
+    /* ========== PROOF BAR ========== */
+    .proof-bar {
+        background: linear-gradient(135deg, #f8f9ff 0%, #f0f1ff 100%);
+        border-bottom: 1px solid rgba(70, 72, 212, 0.08);
+    }
+    .proof-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.625rem 1.25rem;
+        border-radius: 100px;
+        background: white;
+        border: 1px solid rgba(70, 72, 212, 0.1);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: #464554;
+        white-space: nowrap;
+        transition: all 0.3s ease;
+    }
+    .proof-badge:hover {
+        border-color: #4648d4;
+        color: #4648d4;
+        box-shadow: 0 4px 12px rgba(70, 72, 212, 0.1);
+    }
+    .proof-badge .material-symbols-outlined {
+        font-size: 1rem;
+        color: #4648d4;
+    }
+
+    /* ========== TIMELINE ========== */
+    .timeline-container {
+        position: relative;
+        padding-left: 3rem;
+    }
+    .timeline-container::before {
+        content: '';
+        position: absolute;
+        left: 0.9375rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: linear-gradient(180deg, #4648d4 0%, #8455ef 50%, #c7c4d7 100%);
+    }
+    .timeline-node {
+        position: absolute;
+        left: -3rem;
+        top: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+    }
+    .timeline-node-work {
+        background: linear-gradient(135deg, #4648d4, #6063ee);
+        box-shadow: 0 0 0 4px #f6fafe, 0 0 0 6px rgba(70, 72, 212, 0.2);
+    }
+    .timeline-node-edu {
+        background: linear-gradient(135deg, #6b38d4, #8455ef);
+        box-shadow: 0 0 0 4px #f6fafe, 0 0 0 6px rgba(107, 56, 212, 0.2);
+    }
+    .timeline-node-award {
+        background: linear-gradient(135deg, #f59e0b, #f97316);
+        box-shadow: 0 0 0 4px #f6fafe, 0 0 0 6px rgba(245, 158, 11, 0.2);
+    }
+    .timeline-node .material-symbols-outlined {
+        font-size: 0.875rem;
+        color: white;
+    }
+    .timeline-item {
+        position: relative;
+        padding-bottom: 2.5rem;
+    }
+    .timeline-card {
+        background: white;
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        transition: all 0.4s ease;
+        box-shadow: var(--shadow-card);
+    }
+    .timeline-card:hover {
+        box-shadow: var(--shadow-elevated);
+        transform: translateY(-2px);
+        border-color: rgba(70, 72, 212, 0.15);
+    }
+    .timeline-card-award {
+        background: linear-gradient(135deg, #fffbeb, #fef3c7);
+        border: 1px solid rgba(245, 158, 11, 0.15);
+    }
+    .timeline-card-award:hover {
+        border-color: rgba(245, 158, 11, 0.3);
+        box-shadow: 0 12px 40px rgba(245, 158, 11, 0.12);
+    }
+
+    /* ========== PROJECT CASE STUDY CARDS ========== */
+    .case-study-card {
+        background: white;
+        border: 1px solid rgba(0,0,0,0.06);
+        border-radius: 1.5rem;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: var(--shadow-card);
+    }
+    .case-study-card:hover {
+        box-shadow: var(--shadow-elevated);
+        transform: translateY(-4px);
+    }
+    .case-study-featured {
+        border: 1px solid rgba(70, 72, 212, 0.1);
+    }
+    .case-study-featured:hover {
+        border-color: rgba(70, 72, 212, 0.2);
+    }
+
+    /* ========== SKILLS COMPETENCY MAP ========== */
+    .skill-category {
+        background: white;
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 1.25rem;
+        padding: 2rem;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow-card);
+    }
+    .skill-category:hover {
+        box-shadow: var(--shadow-elevated);
+        transform: translateY(-2px);
+    }
+    .skill-pill {
+        padding: 0.375rem 0.875rem;
+        border-radius: 100px;
+        font-size: 0.8125rem;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+    }
+    .skill-pill-core {
+        background: linear-gradient(135deg, #4648d4, #6b38d4);
+        color: white;
+        font-weight: 600;
+    }
+    .skill-pill-default {
+        background: #f0f1ff;
+        color: #4648d4;
+        border-color: rgba(70, 72, 212, 0.1);
+    }
+    .skill-pill-default:hover {
+        background: #4648d4;
+        color: white;
+    }
+
+    /* ========== CONTACT CTA ========== */
+    .cta-section {
+        background: var(--gradient-hero-bg);
+        position: relative;
+        overflow: hidden;
+    }
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at 50% 50%, rgba(70, 72, 212, 0.2) 0%, transparent 60%);
+    }
+    .cta-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 1.125rem;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .cta-button-primary {
+        background: linear-gradient(135deg, #4648d4, #8455ef);
+        color: white;
+        box-shadow: 0 8px 32px rgba(70, 72, 212, 0.3);
+    }
+    .cta-button-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(70, 72, 212, 0.4);
+    }
+
+    /* ========== SCROLL REVEAL ========== */
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ========== NAV ACTIVE STATE ========== */
+    .nav-link {
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #4648d4;
+        transition: width 0.3s ease;
+    }
+    .nav-link.active {
+        color: #4648d4;
+    }
+    .nav-link.active::after {
+        width: 100%;
+    }
+
+    /* ========== MISC ========== */
+    .text-gradient {
+        background: linear-gradient(135deg, #c0c1ff 0%, #e9ddff 50%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .text-gradient-dark {
+        background: linear-gradient(135deg, #4648d4 0%, #8455ef 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Pulse animation for timeline nodes */
+    @keyframes nodePulse {
+        0%, 100% { box-shadow: 0 0 0 4px #f6fafe, 0 0 0 6px rgba(70, 72, 212, 0.2); }
+        50% { box-shadow: 0 0 0 4px #f6fafe, 0 0 0 10px rgba(70, 72, 212, 0.1); }
+    }
+    .timeline-item.revealed .timeline-node {
+        animation: nodePulse 2s ease-in-out 1;
+    }
+
+    /* Responsive timeline */
+    @media (max-width: 768px) {
+        .timeline-container {
+            padding-left: 2.5rem;
         }
-        .neumorphic-inset {
-            background: #f6fafe;
-            box-shadow: inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff;
+        .timeline-container::before {
+            left: 0.6875rem;
         }
-        .glass-card {
-            background: rgba(255, 255, 255, 0.45);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .timeline-node {
+            left: -2.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
         }
-        .text-gradient {
-            background: linear-gradient(135deg, #4648d4 0%, #8455ef 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .timeline-node .material-symbols-outlined {
+            font-size: 0.7rem;
         }
-        .contribution-pixel {
-            width: 10px;
-            height: 10px;
-            border-radius: 2px;
+        .metric-number {
+            font-size: 2rem;
         }
-        
-        .scroll-reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .scroll-reveal.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
+    }
+</style>
 </head>
-<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white">
 
 <!-- Structured Data -->
 <script type="application/ld+json">
@@ -137,14 +400,13 @@
   "@type": "Person",
   "name": "Chetan Valluru",
   "email": "mailto:valluruchetanreddy@gmail.com",
-  "telephone": "+1-732-532-7879",
   "url": "/",
   "sameAs": [
     "https://github.com/chetanreddyv",
-    "https://linkedin.com/in/chetan-valluru"
+    "https://linkedin.com/in/chetan-reddy-valluru"
   ],
-  "jobTitle": "Data Scientist",
-  "description": "Data Scientist with experience building LLM agents, RAG systems, and on-device ML. Specialized in generative AI, NLP, MLOps, model optimization.",
+  "jobTitle": "AI Engineer",
+  "description": "AI Engineer building production LLM agents, RAG systems, knowledge graphs, and on-device ML. Specialized in agentic AI, NLP, MLOps, and model optimization.",
   "alumniOf": [
     {
       "@type": "CollegeOrUniversity",
@@ -159,430 +421,717 @@
 }
 </script>
 
-<!-- TopNavBar (Shared Component) -->
-<nav class="fixed top-0 w-full z-50 bg-white/60 dark:bg-slate-900/70 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(99,102,241,0.1)] transition-all duration-300">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white">Chetan Valluru</div>
-<div class="hidden md:flex gap-8 items-center">
-<a class="text-indigo-600 dark:text-indigo-400 font-bold border-b-2 border-indigo-500 Inter 500 tracking-tight" href="#portfolio">Portfolio</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors Inter 500 tracking-tight" href="#about">About</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors Inter 500 tracking-tight" href="#skills">Skills</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors Inter 500 tracking-tight" href="#trajectory">Trajectory</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors Inter 500 tracking-tight" href="#projects">Projects</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-indigo-500 transition-colors Inter 500 tracking-tight" href="#connect">Connect</a>
-</div>
-<a href="Resume.pdf" download="Chetan_Valluru_Resume.pdf" class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-bold text-sm hover:backdrop-blur-2xl hover:bg-white/80 transition-all duration-300 scale-95 active:scale-90 inline-block">
-                Download CV
-            </a>
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="main-nav" class="fixed top-0 w-full z-50 transition-all duration-500" style="background: transparent;">
+<div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto">
+    <a href="#" class="text-xl font-black tracking-tighter text-white transition-colors duration-300" id="nav-logo">Chetan Valluru</a>
+    <div class="hidden md:flex gap-8 items-center">
+        <a class="nav-link text-sm font-semibold text-white/70 hover:text-white tracking-tight" href="#story" id="nav-story">Story</a>
+        <a class="nav-link text-sm font-semibold text-white/70 hover:text-white tracking-tight" href="#projects" id="nav-projects">Projects</a>
+        <a class="nav-link text-sm font-semibold text-white/70 hover:text-white tracking-tight" href="#skills" id="nav-skills">Skills</a>
+        <a class="nav-link text-sm font-semibold text-white/70 hover:text-white tracking-tight" href="#connect" id="nav-connect">Connect</a>
+    </div>
+    <div class="flex items-center gap-3">
+        <a href="https://github.com/chetanreddyv" target="_blank" class="w-9 h-9 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all" aria-label="GitHub">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank" class="w-9 h-9 rounded-full flex items-center justify-center text-white/60 hover:text-white hover:bg-white/10 transition-all" aria-label="LinkedIn">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+
+    </div>
 </div>
 </nav>
-<main class="pt-24 space-y-32">
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 py-20" id="portfolio">
-<div class="grid lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8 scroll-reveal">
-<div class="inline-flex items-center px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-sm font-semibold tracking-wide uppercase">
-                        Available for Innovation
+
+<!-- ==================== HERO SECTION — "THE HOOK" ==================== -->
+<section class="hero-section" id="hero">
+<div class="hero-grid"></div>
+<div class="max-w-7xl mx-auto px-6 md:px-8 w-full relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left: Headline -->
+        <div class="space-y-8 scroll-reveal">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/60 text-xs font-semibold tracking-widest uppercase">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Open to Opportunities
+            </div>
+            <div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold font-headline leading-[1.05] tracking-tight text-white mb-6">
+                    I build AI systems<br/>
+                    <span class="text-gradient">that ship — and scale.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-white/50 leading-relaxed max-w-lg font-medium">
+                    From 0-to-1 LLM agents at JerseySTEM to a Chrome extension with <span class="text-white/80 font-semibold">60K views in 48 hours</span>. Production agentic AI, knowledge graphs, and systems that don't break.
+                </p>
+            </div>
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a class="cta-button cta-button-primary" href="#projects">
+                    See My Work
+                    <span class="material-symbols-outlined text-lg">arrow_downward</span>
+                </a>
+                <a class="cta-button border border-white/20 text-white hover:bg-white/10" href="#connect">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+
+        <!-- Right: Impact Metrics -->
+        <div class="grid grid-cols-2 gap-4 scroll-reveal" style="transition-delay: 300ms;">
+            <div class="metric-card">
+                <div class="metric-number" data-target="60" data-suffix="K+">0</div>
+                <p class="text-white/40 text-sm font-medium mt-2">Views in 48 Hours</p>
+                <p class="text-white/25 text-xs mt-1">Taylor AI — Zero Marketing</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number" data-target="65" data-suffix="%">0</div>
+                <p class="text-white/40 text-sm font-medium mt-2">Ops Overhead Cut</p>
+                <p class="text-white/25 text-xs mt-1">JerseySTEM Agents</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number" data-target="84" data-suffix="%">0</div>
+                <p class="text-white/40 text-sm font-medium mt-2">RAG Precision</p>
+                <p class="text-white/25 text-xs mt-1">Up from 58% Baseline</p>
+            </div>
+            <div class="metric-card">
+                <div class="metric-number" data-target="4" data-suffix="x">0</div>
+                <p class="text-white/40 text-sm font-medium mt-2">Model Compression</p>
+                <p class="text-white/25 text-xs mt-1">Efficient Local Fine-Tuning</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Scroll indicator -->
+<div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/30 animate-bounce">
+    <span class="text-xs font-medium tracking-widest uppercase">Scroll</span>
+    <span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</section>
+
+<!-- ==================== PROOF BAR — "THE QUICK SCAN" ==================== -->
+<section class="proof-bar py-5">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="flex flex-wrap justify-center gap-3">
+        <div class="proof-badge">
+            <span class="material-symbols-outlined">school</span>
+            Rutgers M.S. Data Science
+        </div>
+        <div class="proof-badge">
+            <span class="material-symbols-outlined">article</span>
+            IEEE Published Researcher
+        </div>
+        <div class="proof-badge">
+            <span class="material-symbols-outlined">emoji_events</span>
+            2x Hackathon Winner
+        </div>
+        <div class="proof-badge">
+            <span class="material-symbols-outlined">deployed_code</span>
+            Production LLM Systems
+        </div>
+        <div class="proof-badge">
+            <span class="material-symbols-outlined">hub</span>
+            Knowledge Graphs &amp; Graph RAG
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- ==================== CAREER STORY TIMELINE — "THE JOURNEY" ==================== -->
+<section class="py-24 md:py-32 bg-surface" id="story">
+<div class="max-w-4xl mx-auto px-6 md:px-8">
+    <div class="mb-16 scroll-reveal">
+        <p class="text-sm font-bold text-primary tracking-widest uppercase mb-3">The Journey</p>
+        <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mb-4">From Research to Production AI</h2>
+        <p class="text-lg text-tertiary max-w-2xl">Every system I've built taught me something the last one couldn't. Here's how I got here.</p>
+    </div>
+
+    <div class="timeline-container">
+
+        <!-- MILESTONE: JerseySTEM (Current) -->
+        <div class="timeline-item scroll-reveal">
+            <div class="timeline-node timeline-node-work">
+                <span class="material-symbols-outlined">rocket_launch</span>
+            </div>
+            <div class="timeline-card">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-primary tracking-wider uppercase bg-primary/5 px-3 py-1 rounded-full">Aug 2025 — Present</span>
+                    <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase bg-emerald-50 px-3 py-1 rounded-full flex items-center gap-1">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Current
+                    </span>
+                </div>
+                <h3 class="text-2xl font-headline font-bold text-on-surface mb-1">Applied AI Engineer</h3>
+                <p class="text-base font-semibold text-primary mb-4">JerseySTEM, NJ</p>
+                <ul class="text-sm text-on-surface-variant leading-relaxed space-y-3 list-disc pl-5 marker:text-primary">
+                    <li>Designed and shipped <strong class="text-on-surface">vertical AI agents</strong> using LangGraph and PydanticAI with deterministic tool routing and fault-tolerant DAG execution — reducing manual operational overhead by 65% across Google Workspace and Jira workflows.</li>
+                    <li>Built <strong class="text-on-surface">schema-aware RAG pipeline</strong> on AWS Bedrock with hybrid retrieval, Redis context caching, and Cohere Rerank; improved precision from 58% to 84% with hallucination and retrieval-miss failure-mode tracking.</li>
+                    <li>Delivered <strong class="text-on-surface">NL-to-SQL analytics engine</strong> with schema grounding and structured output validation; containerized on AWS Lambda + FastAPI, cutting data-to-insight turnaround by 40%.</li>
+                    <li>Stood up <strong class="text-on-surface">production LLM observability</strong> using LangSmith and OpenTelemetry — full workflow tracing, TTFT monitoring, and prompt regression alerts — raising system reliability by 35%.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="skill-pill skill-pill-default text-xs">LangGraph</span>
+                    <span class="skill-pill skill-pill-default text-xs">PydanticAI</span>
+                    <span class="skill-pill skill-pill-default text-xs">AWS Bedrock</span>
+                    <span class="skill-pill skill-pill-default text-xs">Cohere Rerank</span>
+                    <span class="skill-pill skill-pill-default text-xs">FastAPI</span>
+                    <span class="skill-pill skill-pill-default text-xs">LangSmith</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MILESTONE: Rasa Hackathon -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 100ms;">
+            <div class="timeline-node timeline-node-award">
+                <span class="material-symbols-outlined">emoji_events</span>
+            </div>
+            <div class="timeline-card timeline-card-award">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-amber-700 tracking-wider uppercase bg-amber-100 px-3 py-1 rounded-full">2026</span>
+                    <span class="text-xs font-extrabold text-amber-700 tracking-wide uppercase">1st Place</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-on-surface mb-1">Rasa Boston Hackathon</h3>
+                <p class="text-sm text-on-surface-variant">Most Resilient Long-Term Agent. Built an agentic system that maintained coherent, goal-directed behavior across extended multi-turn interactions.</p>
+                <a href="https://github.com/chetanreddyv/rasa-deepagents" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-900 mt-3">
+                    View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MILESTONE: Rutgers -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 200ms;">
+            <div class="timeline-node timeline-node-work">
+                <span class="material-symbols-outlined">science</span>
+            </div>
+            <div class="timeline-card">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-primary tracking-wider uppercase bg-primary/5 px-3 py-1 rounded-full">Nov 2023 — May 2025</span>
+                </div>
+                <h3 class="text-2xl font-headline font-bold text-on-surface mb-1">AI/ML Engineer &amp; Research Assistant</h3>
+                <p class="text-base font-semibold text-primary mb-4">Rutgers University, NJ</p>
+                <ul class="text-sm text-on-surface-variant leading-relaxed space-y-3 list-disc pl-5 marker:text-primary">
+                    <li>Fine-tuned <strong class="text-on-surface">LLaMA-3 using LoRA/QLoRA</strong> on domain corpora; 4-bit quantization trimmed GPU memory by 38% with 97% accuracy retention; built reproducible eval harness for model safety and regression testing.</li>
+                    <li>Built a <strong class="text-on-surface">decoder-only Transformer from scratch</strong> — custom multi-head attention, causal masking, and positional encoding — for distributed training and model safety research.</li>
+                    <li>Deployed FastAPI + Docker inference services handling <strong class="text-on-surface">15,000+ daily requests</strong> at sub-200ms p95 latency with zero unplanned downtime across 12 months.</li>
+                    <li>Automated <strong class="text-on-surface">Airflow ETL pipelines</strong> with version-controlled snapshots and schema drift detection.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="skill-pill skill-pill-default text-xs">LLaMA-3</span>
+                    <span class="skill-pill skill-pill-default text-xs">LoRA/QLoRA</span>
+                    <span class="skill-pill skill-pill-default text-xs">PyTorch</span>
+                    <span class="skill-pill skill-pill-default text-xs">Docker</span>
+                    <span class="skill-pill skill-pill-default text-xs">Airflow</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MILESTONE: HackRU -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 300ms;">
+            <div class="timeline-node timeline-node-award">
+                <span class="material-symbols-outlined">emoji_events</span>
+            </div>
+            <div class="timeline-card timeline-card-award">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-amber-700 tracking-wider uppercase bg-amber-100 px-3 py-1 rounded-full">Oct 2024</span>
+                    <span class="text-xs font-extrabold text-amber-700 tracking-wide uppercase">1st Place</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-on-surface mb-1">HackRU Fall 2024 — NJ Transit Track</h3>
+                <p class="text-sm text-on-surface-variant">XGBoost delay prediction (500K+ records, 82% accuracy) + schema-aware RAG chatbot serving 15K+ queries. 70% faster FAQ resolution.</p>
+                <a href="https://devpost.com/software/ontrack-nj-transit" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-amber-700 hover:text-amber-900 mt-3">
+                    View on Devpost <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- MILESTONE: Education — Rutgers -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 100ms;">
+            <div class="timeline-node timeline-node-edu">
+                <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="timeline-card" style="border-left: 3px solid #6b38d4;">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-secondary tracking-wider uppercase bg-secondary/5 px-3 py-1 rounded-full">Sep 2023 — May 2025</span>
+                    <span class="text-xs font-bold text-secondary bg-secondary/10 px-3 py-1 rounded-full">GPA: 3.65</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-on-surface mb-1">M.S. Data Science</h3>
+                <p class="text-sm font-medium text-tertiary mb-2">Rutgers University, New Brunswick</p>
+                <p class="text-sm text-on-surface-variant">Focus: LLMs, Generative AI, MLOps, System Design</p>
+            </div>
+        </div>
+
+        <!-- MILESTONE: VNR VJIET -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 200ms;">
+            <div class="timeline-node timeline-node-work">
+                <span class="material-symbols-outlined">biotech</span>
+            </div>
+            <div class="timeline-card">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-primary tracking-wider uppercase bg-primary/5 px-3 py-1 rounded-full">Aug 2021 — May 2023</span>
+                </div>
+                <h3 class="text-2xl font-headline font-bold text-on-surface mb-1">AI/ML Research Assistant</h3>
+                <p class="text-base font-semibold text-primary mb-4">VNR VJIET, India</p>
+                <ul class="text-sm text-on-surface-variant leading-relaxed space-y-3 list-disc pl-5 marker:text-primary">
+                    <li>Applied 8-bit quantization to <strong class="text-on-surface">mBERT and IndicBERT</strong>, cutting memory footprint 40% with negligible accuracy loss across 5 multilingual NLP benchmarks.</li>
+                    <li>Constructed Python + PostgreSQL ETL pipelines ingesting <strong class="text-on-surface">2M+ unstructured documents</strong> with automated drift alerting, sustaining 99.5% operational uptime.</li>
+                </ul>
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="skill-pill skill-pill-default text-xs">mBERT</span>
+                    <span class="skill-pill skill-pill-default text-xs">IndicBERT</span>
+                    <span class="skill-pill skill-pill-default text-xs">PostgreSQL</span>
+                    <span class="skill-pill skill-pill-default text-xs">Quantization</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- MILESTONE: IEEE Publication -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 300ms;">
+            <div class="timeline-node timeline-node-award">
+                <span class="material-symbols-outlined">article</span>
+            </div>
+            <div class="timeline-card timeline-card-award">
+                <div class="flex items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-amber-700 tracking-wider uppercase bg-amber-100 px-3 py-1 rounded-full">2023</span>
+                    <span class="text-xs font-extrabold text-amber-700 tracking-wide uppercase">IEEE Publication</span>
+                </div>
+                <h3 class="text-lg font-headline font-bold text-on-surface mb-1">Multi-Classification of Respiratory Diseases using Deep Learning</h3>
+                <p class="text-xs text-tertiary">2023 ICSCSS — DOI: 10.1109/ICSCSS57650.2023.10169597</p>
+            </div>
+        </div>
+
+        <!-- MILESTONE: Education — VNR VJIET -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 100ms;">
+            <div class="timeline-node timeline-node-edu">
+                <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="timeline-card" style="border-left: 3px solid #6b38d4;">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-secondary tracking-wider uppercase bg-secondary/5 px-3 py-1 rounded-full">Aug 2019 — May 2023</span>
+                    <span class="text-xs font-bold text-secondary bg-secondary/10 px-3 py-1 rounded-full">GPA: 3.3</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-on-surface mb-1">B.Tech Electronics &amp; Communication</h3>
+                <p class="text-sm font-medium text-tertiary mb-2">VNR VJIET, India</p>
+                <p class="text-sm text-on-surface-variant">Specialization: AI &amp; Machine Learning</p>
+            </div>
+        </div>
+
+        <!-- British Airways -->
+        <div class="timeline-item scroll-reveal" style="transition-delay: 200ms;">
+            <div class="timeline-node timeline-node-work">
+                <span class="material-symbols-outlined">flight</span>
+            </div>
+            <div class="timeline-card">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="text-xs font-bold text-primary tracking-wider uppercase bg-primary/5 px-3 py-1 rounded-full">Oct 2024</span>
+                </div>
+                <h3 class="text-xl font-headline font-bold text-on-surface mb-1">Data Science Virtual Intern</h3>
+                <p class="text-sm font-medium text-tertiary mb-3">British Airways via Forage</p>
+                <p class="text-sm text-on-surface-variant">NLP sentiment analysis on 3,949+ reviews; built predictive models to map buying patterns and proposed experiments for ~20% campaign ROI lift.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+<!-- ==================== FEATURED PROJECTS — "CASE STUDIES" ==================== -->
+<section class="py-24 md:py-32 bg-surface-container-low" id="projects">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="mb-16 scroll-reveal">
+        <p class="text-sm font-bold text-primary tracking-widest uppercase mb-3">What I've Built</p>
+        <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mb-4">Featured Projects</h2>
+        <p class="text-lg text-tertiary max-w-2xl">Systems that shipped, scaled, and solved real problems.</p>
+    </div>
+
+    <!-- Featured: Taylor AI -->
+    <div class="case-study-card case-study-featured mb-8 scroll-reveal">
+        <div class="grid md:grid-cols-2">
+            <div class="p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="skill-pill skill-pill-core text-xs">Generative AI</span>
+                    <span class="skill-pill skill-pill-core text-xs">NLP</span>
+                    <span class="skill-pill skill-pill-core text-xs">RAG</span>
+                </div>
+                <h3 class="text-3xl font-headline font-bold text-on-surface mb-4">Taylor: AI Career Stylist</h3>
+                <div class="space-y-3 mb-6">
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Problem</span>
+                        <p class="text-sm text-on-surface-variant">Job seekers spend hours tailoring resumes and cover letters for each application.</p>
                     </div>
-<h1 class="text-6xl md:text-8xl font-extrabold font-headline leading-tight tracking-tighter text-gradient">
-                        Chetan Valluru
-                    </h1>
-<p class="text-2xl md:text-3xl font-headline text-on-surface-variant font-medium">
-                        Data Scientist • LLM Engineer • ML Specialist
-                    </p>
-<p class="text-lg text-tertiary leading-relaxed max-w-xl">
-                        Building production LLM agents, RAG systems, and on-device ML solutions. Specialized in generative AI, NLP, and MLOps — reducing costs 60%, accelerating insights 80%, achieving 99.9% accuracy. Expert in PyTorch, Transformers, fine-tuning (LoRA), quantization, and privacy-preserving deployment.
-                    </p>
-<div class="flex flex-wrap gap-6 pt-4">
-<a class="neumorphic-raised px-8 py-4 rounded-xl font-bold text-primary hover:text-secondary transition-all duration-300 flex items-center gap-2" href="#projects">
-                            View My Work
-                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
-</a>
-<a class="glass-card px-8 py-4 rounded-xl font-bold text-on-surface hover:bg-surface-container-low transition-all duration-300 border-outline-variant/20" href="#connect">
-                            Get In Touch
-                        </a>
-</div>
-</div>
-<!-- Tactical Profile Cards Container -->
-<div class="relative flex flex-col gap-6 items-center justify-center scroll-reveal" style="transition-delay: 200ms;">
-<div class="absolute -inset-10 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-[3rem] blur-3xl opacity-30"></div>
-<!-- LinkedIn Card -->
-<div class="glass-card w-full max-w-md p-8 rounded-3xl shadow-2xl relative z-10 transform -rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 neumorphic-raised border border-white/40">
-<div class="flex justify-between items-start mb-6">
-<div class="w-16 h-16 rounded-2xl bg-[#0077b5] flex items-center justify-center text-white">
-<svg class="w-10 h-10 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"></path></svg>
-</div>
-<div class="text-right">
-<div class="text-2xl font-black text-on-surface">500+</div>
-<div class="text-xs font-bold text-tertiary uppercase tracking-wider">Connections</div>
-</div>
-</div>
-<div class="space-y-4">
-<h3 class="text-xl font-headline font-bold text-on-surface">Chetan Valluru</h3>
-<p class="text-sm text-on-surface-variant leading-relaxed font-medium">
-                        Focused on building production-grade LLM agents, scalable RAG systems, and advanced generative AI frameworks.
-                    </p>
-<a class="mt-4 w-full bg-[#0077b5] text-white py-3 rounded-xl font-bold text-center block hover:bg-[#006296] transition-colors shadow-lg shadow-blue-500/20" href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank">View Profile</a>
-</div>
-</div>
-<!-- GitHub Card -->
-<div class="glass-card w-full max-w-md p-8 rounded-3xl shadow-2xl relative z-10 transform rotate-2 translate-x-4 -translate-y-4 hover:rotate-0 hover:translate-x-0 hover:translate-y-0 hover:scale-105 transition-all duration-500 neumorphic-raised border border-white/40">
-<div class="flex justify-between items-start mb-6">
-<div class="w-16 h-16 rounded-2xl bg-on-surface flex items-center justify-center text-surface">
-<svg class="w-10 h-10 fill-current" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
-</div>
-<div class="flex gap-2">
-<span class="px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold rounded-full uppercase">Python</span>
-<span class="px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold rounded-full uppercase">PyTorch</span>
-</div>
-</div>
-<!-- Minimal Contribution Pattern -->
-<div class="grid grid-cols-7 gap-1 mb-6 p-2 rounded-xl bg-surface-container-lowest/50">
-<div class="contribution-pixel bg-primary/20"></div><div class="contribution-pixel bg-primary/60"></div><div class="contribution-pixel bg-primary/40"></div><div class="contribution-pixel bg-primary/10"></div><div class="contribution-pixel bg-primary/80"></div><div class="contribution-pixel bg-primary/30"></div><div class="contribution-pixel bg-primary/50"></div>
-<div class="contribution-pixel bg-primary/10"></div><div class="contribution-pixel bg-primary/40"></div><div class="contribution-pixel bg-primary/90"></div><div class="contribution-pixel bg-primary/20"></div><div class="contribution-pixel bg-primary/60"></div><div class="contribution-pixel bg-primary/10"></div><div class="contribution-pixel bg-primary/40"></div>
-<div class="contribution-pixel bg-primary/50"></div><div class="contribution-pixel bg-primary/10"></div><div class="contribution-pixel bg-primary/30"></div><div class="contribution-pixel bg-primary/70"></div><div class="contribution-pixel bg-primary/40"></div><div class="contribution-pixel bg-primary/90"></div><div class="contribution-pixel bg-primary/20"></div>
-</div>
-<a class="w-full border-2 border-on-surface text-on-surface py-3 rounded-xl font-bold text-center block hover:bg-on-surface hover:text-surface transition-all" href="https://github.com/chetanreddyv" target="_blank">View Repositories</a>
-</div>
-</div>
-</div>
-</section>
-
-<!-- About & Education Section (Added from Old Design) -->
-<section class="max-w-7xl mx-auto px-8 py-20" id="about">
-<div class="mb-16 scroll-reveal">
-<h2 class="text-4xl md:text-5xl font-headline font-extrabold mb-4">About Me & Education</h2>
-<div class="w-24 h-1 bg-primary rounded-full"></div>
-</div>
-<div class="grid lg:grid-cols-2 gap-16">
-<div class="neumorphic-raised p-10 rounded-[2.5rem] scroll-reveal">
-<h3 class="text-3xl font-headline font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-primary text-4xl" data-icon="lightbulb">lightbulb</span> My Mission</h3>
-<p class="text-tertiary text-lg leading-relaxed">
-    I build production AI systems that solve real problems. From architecting NL-to-SQL platforms with LLM-powered NLP to deploying privacy-preserving on-device ML, I focus on shipping reliable, optimized solutions. My work has reduced data tickets 30%, accelerated insights 80%, and enabled self-serve analytics for cross-functional teams. I specialize in LLMs, RAG, fine-tuning, quantization, and MLOps — always balancing performance, cost, and security.
-</p>
-</div>
-<div class="glass-card p-10 rounded-[2.5rem] scroll-reveal" style="transition-delay: 200ms;">
-<h3 class="text-3xl font-headline font-bold mb-6 flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-4xl" data-icon="school">school</span> Education</h3>
-<div class="space-y-8">
-    <div class="group">
-        <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">Rutgers University — M.S. Data Science</h4>
-        <div class="flex flex-wrap gap-2 text-sm text-tertiary font-medium mb-3 mt-1">
-            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full">GPA: 3.65</span>
-            <span class="bg-surface-container px-3 py-1 rounded-full">Sep 2023 – May 2025</span>
-        </div>
-        <p class="text-on-surface-variant">Focus: LLMs, Generative AI, MLOps, System Design</p>
-    </div>
-    <div class="w-full h-px bg-outline-variant/30"></div>
-    <div class="group">
-        <h4 class="text-xl font-bold text-on-surface group-hover:text-primary transition-colors">VNR VJIET — B.Tech Electronics & Communication</h4>
-        <div class="flex flex-wrap gap-2 text-sm text-tertiary font-medium mb-3 mt-1">
-            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full">GPA: 3.3</span>
-            <span class="bg-surface-container px-3 py-1 rounded-full">Aug 2019 – May 2023</span>
-        </div>
-        <p class="text-on-surface-variant">Specialization: AI & Machine Learning</p>
-    </div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Experience & Distinctions (Asymmetric Layout) -->
-<section class="bg-surface-container-low py-32" id="trajectory">
-<div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-3 gap-16">
-<!-- Publications & Achievements (Left Column) -->
-<div class="lg:col-span-1 space-y-12">
-<h2 class="text-4xl font-headline font-extrabold text-on-surface scroll-reveal">Distinctions</h2>
-<div class="space-y-6">
-<div class="neumorphic-raised p-6 rounded-2xl group hover:-translate-y-1 transition-transform scroll-reveal">
-<span class="material-symbols-outlined text-secondary mb-4 text-3xl" data-icon="article">article</span>
-<h3 class="font-headline font-bold text-lg mb-2">IEEE Research Publication</h3>
-<p class="text-sm font-medium text-on-surface mb-1">Multi-Classification of Respiratory Diseases using Deep Learning</p>
-<p class="text-xs text-tertiary">2023 ICSCSS • DOI: 10.1109/ICSCSS57650.2023.10169597</p>
-</div>
-<div class="glass-card p-6 rounded-2xl group hover:-translate-y-1 transition-transform scroll-reveal" style="transition-delay: 100ms;">
-<span class="material-symbols-outlined text-primary mb-4 text-3xl" data-icon="emoji_events">emoji_events</span>
-<h3 class="font-headline font-bold text-lg mb-2">HackRU Fall 2024 — 1st Place</h3>
-<p class="text-sm font-medium text-on-surface mb-1">NJ Transit Track Winner</p>
-<p class="text-xs text-tertiary">ML delay prediction (82% accuracy) + RAG chatbot serving 15K+ queries.</p>
-</div>
-<div class="glass-card p-6 rounded-2xl group hover:-translate-y-1 transition-transform scroll-reveal" style="transition-delay: 200ms;">
-<span class="material-symbols-outlined text-amber-500 mb-4 text-3xl" data-icon="military_tech">military_tech</span>
-<h3 class="font-headline font-bold text-lg mb-2">Global Youth Scientist</h3>
-<p class="text-sm font-medium text-on-surface mb-1">GOLD Award</p>
-<p class="text-xs text-tertiary">Recognized for applied AI research and community impact in international STEM competition.</p>
-</div>
-</div>
-</div>
-<!-- Experience (Right Column) -->
-<div class="lg:col-span-2 space-y-12">
-<h2 class="text-4xl font-headline font-extrabold text-on-surface scroll-reveal">Experience</h2>
-<div class="space-y-4">
-<div class="flex flex-col md:flex-row gap-8 items-start p-8 glass-card rounded-3xl group transition-all duration-500 hover:bg-white/60 scroll-reveal">
-<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary" data-icon="analytics">analytics</span>
-</div>
-<div>
-<span class="text-sm font-bold text-primary mb-2 block">August 2025 – Present</span>
-<h3 class="text-2xl font-headline font-bold text-on-surface">Data Scientist</h3>
-<p class="text-lg font-medium text-tertiary mb-4">JerseySTEM, NJ</p>
-<ul class="text-sm text-on-surface-variant leading-relaxed space-y-2 list-disc pl-4">
-    <li>Architected production NL-to-SQL platform using LLM-powered NLP, LangChain, and schema-aware RAG; reduced data tickets 30%, accelerated insights 80%, enabled self-serve analytics for 8+ teams.</li>
-    <li>Engineered MLOps pipeline for LLM deployment with NLP evaluation harness (faithfulness, semantic similarity, precision/recall) and automated testing; achieved 95% grounded responses via optimized LLM inference.</li>
-    <li>Implemented LLM security: NLP-based PII detection, RBAC, audit logging, prompt injection mitigation; reduced LLM hallucinations 40%, maintained 99.8% uptime Q4 2025.</li>
-</ul>
-</div>
-</div>
-
-<div class="flex flex-col md:flex-row gap-8 items-start p-8 bg-transparent hover:bg-white/40 transition-all rounded-3xl group scroll-reveal" style="transition-delay: 100ms;">
-<div class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-secondary" data-icon="flight_takeoff">flight_takeoff</span>
-</div>
-<div>
-<span class="text-sm font-bold text-secondary mb-2 block">Oct 2024</span>
-<h3 class="text-2xl font-headline font-bold text-on-surface">Data Science Virtual Intern</h3>
-<p class="text-lg font-medium text-tertiary mb-4">British Airways via Forage</p>
-<p class="text-sm text-on-surface-variant leading-relaxed mb-2">Conducted NLP sentiment analysis on 3,949+ reviews; built predictive models to map buying patterns and proposed experiments for ~20% campaign ROI lift.</p>
-</div>
-</div>
-
-<div class="flex flex-col md:flex-row gap-8 items-start p-8 bg-transparent hover:bg-white/40 transition-all rounded-3xl group scroll-reveal" style="transition-delay: 200ms;">
-<div class="w-16 h-16 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-tertiary" data-icon="school">school</span>
-</div>
-<div>
-<span class="text-sm font-bold text-tertiary mb-2 block">Sep 2023 – May 2024</span>
-<h3 class="text-2xl font-headline font-bold text-on-surface">Machine Learning & Statistics Grader</h3>
-<p class="text-lg font-medium text-tertiary mb-4">Rutgers University</p>
-<p class="text-sm text-on-surface-variant leading-relaxed mb-2">Reviewed 60+ weekly assignments on statistical inference and ML. Focused feedback on reproducibility, metrics validation, and model-data fit.</p>
-</div>
-</div>
-
-<div class="flex flex-col md:flex-row gap-8 items-start p-8 bg-transparent hover:bg-white/40 transition-all rounded-3xl group scroll-reveal" style="transition-delay: 300ms;">
-<div class="w-16 h-16 rounded-2xl bg-emerald-500/10 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-emerald-600" data-icon="science">science</span>
-</div>
-<div>
-<span class="text-sm font-bold text-emerald-600 mb-2 block">Aug 2021 – May 2023</span>
-<h3 class="text-2xl font-headline font-bold text-on-surface">AI/ML Research Assistant</h3>
-<p class="text-lg font-medium text-tertiary mb-4">VNR VJIET, India</p>
-<ul class="text-sm text-on-surface-variant leading-relaxed space-y-2 list-disc pl-4">
-    <li>Fine-tuned multilingual NLP models (mBERT, IndicBERT) using LoRA and 8-bit quantization on PyTorch; improved access for 50,000+ farmers, reduced language barriers 40%, published reproducible benchmarks supporting government agricultural programs.</li>
-    <li>Built ETL data pipelines (Python, Scrapy, SQL) with validation, drift detection, lineage tracking; generated 2M+ documents accelerating regional AI research 60%.</li>
-    <li>Designed eval framework (BLEU, ROUGE, F1) with chaos tests and fallbacks; maintained 99.5% uptime across 6-month production pilot.</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Projects Bento Grid -->
-<section class="max-w-7xl mx-auto px-8 py-20" id="projects">
-<div class="mb-16 scroll-reveal">
-<h2 class="text-5xl font-headline font-extrabold mb-4">Featured Projects</h2>
-<div class="w-24 h-1 bg-primary rounded-full"></div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-6 grid-rows-none md:grid-rows-auto gap-6 h-auto">
-<!-- Featured: Taylor AI -->
-<div class="md:col-span-4 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group overflow-hidden relative scroll-reveal min-h-[400px]">
-<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-3xl -mr-20 -mt-20 group-hover:bg-primary/20 transition-all z-0"></div>
-<div class="relative z-10">
-<div class="flex gap-3 mb-6">
-<span class="px-4 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">Generative AI</span>
-<span class="px-4 py-1 rounded-full bg-secondary/10 text-secondary text-xs font-bold uppercase tracking-widest">NLP</span>
-</div>
-<h3 class="text-4xl font-headline font-bold mb-4">Taylor: AI Career Stylist</h3>
-<p class="text-tertiary text-lg max-w-xl">RAG-powered LLM app automating resume/cover letter creation for 250+ users. 50% faster application processing, &lt;3s latency, serverless architecture with personalized outputs.</p>
-</div>
-<div class="mt-8 flex flex-wrap items-center gap-4 relative z-10">
-<a href="https://chetanreddyv.github.io/Taylor/" target="_blank" class="bg-primary text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-primary/90 transition-all flex items-center gap-2">
-    Add to Chrome <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span>
-</a>
-<a href="https://github.com/chetanreddyv/Taylor" target="_blank" class="bg-surface border border-outline-variant px-6 py-3 rounded-full font-bold text-sm hover:bg-surface-variant transition-all flex items-center gap-2 text-on-surface">
-    <i class="fab fa-github"></i> Code
-</a>
-</div>
-</div>
-
-<!-- Project: GemmA.I -->
-<div class="md:col-span-2 neumorphic-raised rounded-[2.5rem] p-10 flex flex-col justify-between group scroll-reveal relative min-h-[400px]" style="transition-delay: 100ms;">
-<div class="absolute top-10 right-10 text-6xl opacity-20 group-hover:opacity-100 transition-opacity duration-500 group-hover:scale-110 transform">👁️</div>
-<div class="relative z-10">
-<div class="mb-6">
-<span class="px-4 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant text-xs font-bold uppercase tracking-widest">RAG / ML</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-4">GemmA.I: Vision Assistant</h3>
-<p class="text-tertiary text-sm leading-relaxed">iOS accessibility app for blind/low-vision users with real-time scene understanding via MediaPipe Gemini. 100% on-device privacy, &lt;500ms inference (INT8).</p>
-</div>
-<div class="mt-8 flex flex-col gap-3 relative z-10 w-full">
-<a href="https://youtu.be/9jFIB0NQrnY" target="_blank" class="w-full bg-secondary text-white text-center py-3 rounded-xl font-bold text-sm hover:bg-secondary/90 transition-all">Watch Demo</a>
-<a href="https://github.com/chetanreddyv/GemmA.I" target="_blank" class="w-full bg-transparent border border-outline-variant text-center py-3 rounded-xl font-bold text-sm hover:bg-surface-variant transition-all text-on-surface"><i class="fab fa-github mr-1"></i> View Code</a>
-</div>
-</div>
-
-<!-- Project: BetterLlama -->
-<div class="md:col-span-2 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group border-primary/20 scroll-reveal">
-<div>
-<div class="mb-6">
-<span class="px-4 py-1 rounded-full bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-widest">Fine-Tuning</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-4">BetterLlama</h3>
-<p class="text-tertiary text-sm mb-4">Fine-tuned LLaMA 3.2 with LoRA/8-bit quantization. 1.8× faster inference, 99.9% MMLU accuracy, 4× compression, 60% cost reduction. Integrated chain-of-thought and LLM Guardrails.</p>
-</div>
-<div class="mt-4 flex justify-between items-center w-full">
-<a href="https://github.com/chetanreddyv/BetterLlama" target="_blank" class="text-sm font-bold text-primary hover:text-secondary flex items-center gap-1">View Project <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-<span class="material-symbols-outlined text-4xl text-primary/40 group-hover:text-primary/70 transition-colors" data-icon="memory">memory</span>
-</div>
-</div>
-
-<!-- Project: ChessGPT -->
-<div class="md:col-span-2 neumorphic-raised rounded-[2.5rem] p-10 flex flex-col justify-between group scroll-reveal" style="transition-delay: 100ms;">
-<div>
-<div class="mb-6">
-<span class="px-4 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold uppercase tracking-widest">Transformers</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-4">ChessGPT</h3>
-<p class="text-tertiary text-sm mb-4">Custom tokenizer for move generation (~30 legal moves/prompt) with compact model footprint. GPT-based architecture for chess move prediction.</p>
-</div>
-<div class="mt-4 flex justify-between items-center w-full">
-<a href="https://github.com/chetanreddyv/ChessGPT" target="_blank" class="text-sm font-bold text-amber-600 hover:text-amber-800 flex items-center gap-1">View Project <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
-<span class="material-symbols-outlined text-4xl text-amber-500/40 group-hover:text-amber-500/70 transition-colors" data-icon="sports_esports">sports_esports</span>
-</div>
-</div>
-
-<!-- Project: NJ Transit Assistant -->
-<div class="md:col-span-2 glass-card rounded-[2.5rem] p-10 flex flex-col justify-between group scroll-reveal" style="transition-delay: 200ms;">
-<div>
-<div class="mb-4 flex flex-wrap gap-2">
-<span class="px-4 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-widest">XGBoost</span>
-<span class="px-4 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-xs font-bold uppercase tracking-widest">Agents</span>
-</div>
-<h3 class="text-2xl font-headline font-bold mb-4">NJ Transit Assistant</h3>
-<p class="text-tertiary text-sm mb-4">1st Place HackRU. XGBoost delay prediction (500K+ records, 82% accuracy) + schema-aware RAG chatbot. 70% faster FAQ resolution, 15K+ queries processed.</p>
-</div>
-<div class="mt-4 flex justify-between items-center w-full">
-<a href="https://devpost.com/software/ontrack-nj-transit" target="_blank" class="text-sm font-bold text-emerald-600 hover:text-emerald-800 flex items-center gap-1">Devpost <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span></a>
-<span class="material-symbols-outlined text-4xl text-emerald-500/40 group-hover:text-emerald-500/70 transition-colors" data-icon="train">train</span>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Skills Cloud (Horizontal Scroll/Flow) -->
-<section class="max-w-7xl mx-auto px-8 py-20 overflow-hidden" id="skills">
-<div class="text-center mb-16 scroll-reveal">
-<h2 class="text-4xl font-headline font-extrabold mb-4">Technical Stack</h2>
-<p class="text-tertiary">Core competencies across the AI development lifecycle</p>
-</div>
-<div class="flex flex-wrap justify-center gap-4 scroll-reveal">
-<!-- AI/ML -->
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">LLMs</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">Generative AI</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">NLP</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">Transformers</div>
-<div class="px-6 py-3 rounded-full bg-primary text-white font-medium cursor-default shadow-lg shadow-primary/20">RAG</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">Fine-Tuning</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">LoRA</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">Quantization</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-primary hover:text-white transition-all duration-300 cursor-default">Prompt Engineering</div>
-
-<!-- Frameworks & Tools -->
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">PyTorch</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">TensorFlow</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">HuggingFace</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">LangChain</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">Scikit-learn</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-secondary hover:text-white transition-all duration-300 cursor-default">XGBoost</div>
-
-<!-- MLOps & DBs -->
-<div class="px-6 py-3 rounded-full bg-secondary text-white font-medium cursor-default shadow-lg shadow-secondary/20">MLOps</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">Docker</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">CI/CD</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">GCP</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">Vector DBs</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">PostgreSQL</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 cursor-default">MongoDB</div>
-
-<!-- Languages -->
-<div class="px-6 py-3 rounded-full bg-slate-800 text-white font-medium cursor-default shadow-lg shadow-slate-800/20">Python</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-default">Swift</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-default">SQL</div>
-<div class="px-6 py-3 rounded-full bg-white shadow-sm border border-outline-variant/10 text-on-surface font-medium hover:bg-slate-800 hover:text-white transition-all duration-300 cursor-default">JavaScript</div>
-</div>
-</section>
-
-<!-- Contact Section -->
-<section class="max-w-7xl mx-auto px-8 py-32" id="connect">
-<div class="glass-card rounded-[3rem] p-12 md:p-20 relative overflow-hidden text-center scroll-reveal">
-<div class="absolute -top-24 -left-24 w-96 h-96 bg-primary/10 rounded-full blur-[100px]"></div>
-<div class="absolute -bottom-24 -right-24 w-96 h-96 bg-secondary/10 rounded-full blur-[100px]"></div>
-<div class="relative z-10">
-    <h2 class="text-5xl md:text-6xl font-headline font-extrabold mb-8">Let's build the future of AI together.</h2>
-    <p class="text-xl text-tertiary mb-12 max-w-2xl mx-auto">Currently open to research collaborations and engineering opportunities in generative AI and large-scale data systems. Based in United States.</p>
-    
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
-        <a class="flex items-center gap-4 text-2xl font-bold text-on-surface hover:text-primary transition-colors group" href="mailto:valluruchetanreddy@gmail.com">
-            <div class="w-14 h-14 rounded-full neumorphic-raised flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Solution</span>
+                        <p class="text-sm text-on-surface-variant">RAG-powered Chrome extension that auto-generates tailored career documents from any job listing.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider shrink-0 mt-0.5 w-20 font-extrabold">Impact</span>
+                        <p class="text-sm text-on-surface font-semibold">60,000 views and 600 access requests in 48 hours — zero marketing spend.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://chetanreddyv.github.io/Taylor/" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        Add to Chrome <span class="material-symbols-outlined text-sm">open_in_new</span>
+                    </a>
+                    <a href="https://github.com/chetanreddyv/Taylor" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface border border-outline-variant/30 text-on-surface font-bold text-sm hover:bg-surface-container transition-all">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
+                </div>
             </div>
-            Email
-        </a>
-        <a class="flex items-center gap-4 text-2xl font-bold text-on-surface hover:text-primary transition-colors group" href="tel:7325327879">
-            <div class="w-14 h-14 rounded-full neumorphic-raised flex items-center justify-center group-hover:scale-110 transition-transform">
-                <span class="material-symbols-outlined" data-icon="phone">phone</span>
+            <div class="bg-gradient-to-br from-primary/5 to-secondary/5 p-8 md:p-12 flex items-center justify-center min-h-[280px]">
+                <div class="text-center space-y-4">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-primary/10">
+                        <span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-extrabold font-headline text-gradient-dark">60K+</div>
+                        <p class="text-sm text-tertiary font-medium">Views in 48 hrs</p>
+                    </div>
+                    <div class="flex justify-center gap-6 text-sm">
+                        <div>
+                            <div class="font-bold text-on-surface">600+</div>
+                            <div class="text-xs text-tertiary">Requests</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-on-surface">$0</div>
+                            <div class="text-xs text-tertiary">Marketing</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            (732) 532-7879
-        </a>
+        </div>
     </div>
-    
-    <div class="flex flex-wrap justify-center items-center gap-6">
-        <a class="flex items-center gap-2 px-6 py-3 bg-white text-slate-800 rounded-xl font-bold hover:shadow-lg transition-all" href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank">
-            <i class="fab fa-linkedin text-blue-600 text-xl"></i> LinkedIn
-        </a>
-        <a class="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-xl font-bold hover:shadow-lg transition-all" href="https://github.com/chetanreddyv" target="_blank">
-            <i class="fab fa-github text-xl"></i> GitHub
-        </a>
-        <button id="copy-email-btn" class="flex items-center gap-2 px-6 py-3 bg-surface-variant text-on-surface font-bold rounded-xl hover:bg-surface-dim transition-all">
-            <span class="material-symbols-outlined text-xl" data-icon="content_copy">content_copy</span> Copy Email
-        </button>
+
+    <!-- Featured: GemmA.I -->
+    <div class="case-study-card case-study-featured mb-8 scroll-reveal" style="transition-delay: 100ms;">
+        <div class="grid md:grid-cols-2">
+            <div class="p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="skill-pill skill-pill-core text-xs">On-Device ML</span>
+                    <span class="skill-pill skill-pill-core text-xs">iOS</span>
+                    <span class="skill-pill skill-pill-core text-xs">Accessibility</span>
+                </div>
+                <h3 class="text-3xl font-headline font-bold text-on-surface mb-4">GemmA.I: Vision Assistant</h3>
+                <div class="space-y-3 mb-6">
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Problem</span>
+                        <p class="text-sm text-on-surface-variant">Blind and low-vision users lack real-time, private scene understanding tools.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Solution</span>
+                        <p class="text-sm text-on-surface-variant">iOS app with real-time scene understanding via MediaPipe + Gemini. 100% on-device privacy.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider shrink-0 mt-0.5 w-20 font-extrabold">Impact</span>
+                        <p class="text-sm text-on-surface font-semibold">Sub-500ms inference with INT8 quantization. Fully private, zero cloud dependency.</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://youtu.be/9jFIB0NQrnY" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-secondary text-white font-bold text-sm hover:bg-secondary/90 transition-all shadow-lg shadow-secondary/20">
+                        Watch Demo <span class="material-symbols-outlined text-sm">play_arrow</span>
+                    </a>
+                    <a href="https://github.com/chetanreddyv/GemmA.I" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface border border-outline-variant/30 text-on-surface font-bold text-sm hover:bg-surface-container transition-all">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        Code
+                    </a>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-secondary/5 to-primary/5 p-8 md:p-12 flex items-center justify-center min-h-[280px]">
+                <div class="text-center space-y-4">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary/10">
+                        <span class="material-symbols-outlined text-secondary text-4xl">visibility</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold font-headline text-gradient-dark">&lt;500ms</div>
+                        <p class="text-sm text-tertiary font-medium">Inference Latency</p>
+                    </div>
+                    <div class="flex justify-center gap-6 text-sm">
+                        <div>
+                            <div class="font-bold text-on-surface">INT8</div>
+                            <div class="text-xs text-tertiary">Quantized</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-on-surface">100%</div>
+                            <div class="text-xs text-tertiary">On-Device</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+
+    <!-- Featured: Rasa Wally -->
+    <div class="case-study-card case-study-featured mb-8 scroll-reveal" style="transition-delay: 200ms;">
+        <div class="grid md:grid-cols-2">
+            <div class="p-8 md:p-12 flex flex-col justify-center">
+                <div class="flex flex-wrap gap-2 mb-5">
+                    <span class="skill-pill skill-pill-core text-xs">Agentic AI</span>
+                    <span class="skill-pill skill-pill-core text-xs">Rasa</span>
+                    <span class="skill-pill skill-pill-core text-xs">Stateful</span>
+                </div>
+                <h3 class="text-3xl font-headline font-bold text-on-surface mb-4">Wally: The Always-On AI Coworker</h3>
+                <div class="space-y-3 mb-6">
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Concept</span>
+                        <p class="text-sm text-on-surface-variant">Moves beyond the ephemeral 5-minute chat window to become a long-term, stateful digital coworker.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-tertiary uppercase tracking-wider shrink-0 mt-0.5 w-20">Features</span>
+                        <p class="text-sm text-on-surface-variant">Persistent state across sessions, proactive anomaly detection (heartbeat monitor), agentic triage with human-in-the-loop, and strict deterministic fallback flows.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="text-xs font-bold text-primary uppercase tracking-wider shrink-0 mt-0.5 w-20 font-extrabold">Award</span>
+                        <p class="text-sm text-on-surface font-semibold">1st Place — Most Resilient Long-Term Agent (Rasa Boston Hackathon 2026).</p>
+                    </div>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <a href="https://github.com/chetanreddyv/rasa-deepagents" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary text-white font-bold text-sm hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        View Code
+                    </a>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 md:p-12 flex items-center justify-center min-h-[280px]">
+                <div class="text-center space-y-4">
+                    <div class="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-amber-100/50">
+                        <span class="material-symbols-outlined text-amber-600 text-4xl">robot_2</span>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold font-headline text-amber-600">Always-On</div>
+                        <p class="text-sm text-tertiary font-medium">Persistent State AI</p>
+                    </div>
+                    <div class="flex justify-center gap-6 text-sm">
+                        <div>
+                            <div class="font-bold text-on-surface">Proactive</div>
+                            <div class="text-xs text-tertiary">Heartbeat Monitor</div>
+                        </div>
+                        <div>
+                            <div class="font-bold text-on-surface">Agentic</div>
+                            <div class="text-xs text-tertiary">Triage &amp; MCP Tools</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compact Project Grid -->
+    <div class="grid md:grid-cols-3 gap-6">
+        <!-- BetterLlama -->
+        <div class="case-study-card p-8 scroll-reveal" style="transition-delay: 200ms;">
+            <div class="flex items-start justify-between mb-4">
+                <span class="skill-pill skill-pill-core text-xs">Fine-Tuning</span>
+                <span class="material-symbols-outlined text-3xl text-primary/30">memory</span>
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-3">BetterLlama</h3>
+            <p class="text-sm text-on-surface-variant mb-4">Efficient locally fine-tuned LLaMA 3.2 for personal agent intelligence. LoRA + 8-bit quantization achieving 4x compression, 1.8x faster inference, 60% cost reduction. Integrated chain-of-thought and LLM Guardrails.</p>
+            <a href="https://github.com/chetanreddyv/BetterLlama" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-primary hover:text-secondary">
+                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+
+        <!-- ChessGPT -->
+        <div class="case-study-card p-8 scroll-reveal" style="transition-delay: 300ms;">
+            <div class="flex items-start justify-between mb-4">
+                <span class="skill-pill text-xs bg-amber-50 text-amber-700 border-amber-100 border font-semibold">Transformers</span>
+                <span class="material-symbols-outlined text-3xl text-amber-500/30">sports_esports</span>
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-3">ChessGPT</h3>
+            <p class="text-sm text-on-surface-variant mb-4">GPT-based chess move prediction with custom tokenizer generating ~30 legal moves per prompt. Compact model footprint demonstrating Transformer architecture mastery.</p>
+            <a href="https://github.com/chetanreddyv/ChessGPT" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-amber-600 hover:text-amber-800">
+                View Project <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
+        </div>
+
+        <!-- NJ Transit -->
+        <div class="case-study-card p-8 scroll-reveal" style="transition-delay: 400ms;">
+            <div class="flex items-start justify-between mb-4">
+                <div class="flex gap-2">
+                    <span class="skill-pill text-xs bg-emerald-50 text-emerald-700 border-emerald-100 border font-semibold">XGBoost</span>
+                    <span class="skill-pill text-xs bg-secondary/5 text-secondary border-secondary/10 border font-semibold">Agents</span>
+                </div>
+                <span class="material-symbols-outlined text-3xl text-emerald-500/30">train</span>
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface mb-3">NJ Transit Assistant</h3>
+            <p class="text-sm text-on-surface-variant mb-4">1st Place HackRU. XGBoost delay prediction (500K+ records, 82% accuracy) + schema-aware RAG chatbot. 70% faster FAQ resolution.</p>
+            <a href="https://devpost.com/software/ontrack-nj-transit" target="_blank" class="inline-flex items-center gap-1 text-sm font-bold text-emerald-600 hover:text-emerald-800">
+                Devpost <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+        </div>
+    </div>
 </div>
 </section>
-</main>
-<!-- Footer (Shared Component) -->
-<footer class="w-full py-12 border-t border-slate-200/50 dark:border-slate-800/50 bg-slate-50 dark:bg-slate-950 mt-20">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
-<div class="font-bold text-slate-900 dark:text-white">CHETAN.AI</div>
-<p class="text-sm font-medium Inter text-slate-500">© 2024 Chetan Valluru • Engineered with Precision • <a href="Resume.pdf" download="Chetan_Valluru_Resume.pdf" class="hover:text-indigo-400 underline decoration-indigo-200 underline-offset-4">Resume</a></p>
-<div class="flex gap-6">
-<a class="text-slate-500 hover:text-indigo-400 opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-indigo-500 underline-offset-4 text-sm font-medium Inter" href="https://github.com/chetanreddyv" target="_blank">GitHub</a>
-<a class="text-slate-500 hover:text-indigo-400 opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-indigo-500 underline-offset-4 text-sm font-medium Inter" href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank">LinkedIn</a>
+
+<!-- ==================== TECHNICAL STACK — "COMPETENCY MAP" ==================== -->
+<section class="py-24 md:py-32 bg-surface" id="skills">
+<div class="max-w-7xl mx-auto px-6 md:px-8">
+    <div class="mb-16 scroll-reveal">
+        <p class="text-sm font-bold text-primary tracking-widest uppercase mb-3">Technical Depth</p>
+        <h2 class="text-4xl md:text-5xl font-headline font-extrabold text-on-surface mb-4">Competency Map</h2>
+        <p class="text-lg text-tertiary max-w-2xl">Core competencies across the AI development lifecycle — from research to production.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- AI & ML -->
+        <div class="skill-category scroll-reveal">
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-primary">psychology</span>
+                </div>
+                <h3 class="font-headline font-bold text-on-surface">AI &amp; ML</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-pill skill-pill-core">LLMs</span>
+                <span class="skill-pill skill-pill-core">Agentic AI</span>
+                <span class="skill-pill skill-pill-core">RAG</span>
+                <span class="skill-pill skill-pill-default">Generative AI</span>
+                <span class="skill-pill skill-pill-default">NLP</span>
+                <span class="skill-pill skill-pill-default">Transformers</span>
+                <span class="skill-pill skill-pill-default">Fine-Tuning</span>
+                <span class="skill-pill skill-pill-default">LoRA / QLoRA</span>
+                <span class="skill-pill skill-pill-default">Quantization</span>
+                <span class="skill-pill skill-pill-default">Knowledge Graphs</span>
+                <span class="skill-pill skill-pill-default">Graph RAG</span>
+                <span class="skill-pill skill-pill-default">Prompt Engineering</span>
+            </div>
+        </div>
+
+        <!-- Frameworks & Tools -->
+        <div class="skill-category scroll-reveal" style="transition-delay: 100ms;">
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-secondary">build</span>
+                </div>
+                <h3 class="font-headline font-bold text-on-surface">Frameworks</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-pill skill-pill-core">PyTorch</span>
+                <span class="skill-pill skill-pill-core">LangChain</span>
+                <span class="skill-pill skill-pill-default">LangGraph</span>
+                <span class="skill-pill skill-pill-default">PydanticAI</span>
+                <span class="skill-pill skill-pill-default">HuggingFace</span>
+                <span class="skill-pill skill-pill-default">TensorFlow</span>
+                <span class="skill-pill skill-pill-default">Scikit-learn</span>
+                <span class="skill-pill skill-pill-default">XGBoost</span>
+                <span class="skill-pill skill-pill-default">FastAPI</span>
+                <span class="skill-pill skill-pill-default">Rasa</span>
+            </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div class="skill-category scroll-reveal" style="transition-delay: 200ms;">
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-emerald-600">cloud</span>
+                </div>
+                <h3 class="font-headline font-bold text-on-surface">Infrastructure</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-pill skill-pill-core">MLOps</span>
+                <span class="skill-pill skill-pill-core">Docker</span>
+                <span class="skill-pill skill-pill-default">AWS (Bedrock, Lambda)</span>
+                <span class="skill-pill skill-pill-default">GCP</span>
+                <span class="skill-pill skill-pill-default">CI/CD</span>
+                <span class="skill-pill skill-pill-default">Harness</span>
+                <span class="skill-pill skill-pill-default">Vector DBs</span>
+                <span class="skill-pill skill-pill-default">PostgreSQL</span>
+                <span class="skill-pill skill-pill-default">MongoDB</span>
+                <span class="skill-pill skill-pill-default">Redis</span>
+                <span class="skill-pill skill-pill-default">Airflow</span>
+            </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="skill-category scroll-reveal" style="transition-delay: 300ms;">
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-slate-800/10 flex items-center justify-center">
+                    <span class="material-symbols-outlined text-slate-700">code</span>
+                </div>
+                <h3 class="font-headline font-bold text-on-surface">Languages</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+                <span class="skill-pill skill-pill-core">Python</span>
+                <span class="skill-pill skill-pill-default">SQL</span>
+                <span class="skill-pill skill-pill-default">Swift</span>
+                <span class="skill-pill skill-pill-default">JavaScript</span>
+                <span class="skill-pill skill-pill-default">TypeScript</span>
+                <span class="skill-pill skill-pill-default">Bash</span>
+            </div>
+        </div>
+    </div>
 </div>
+</section>
+
+<!-- ==================== CONTACT — "THE ASK" ==================== -->
+<section class="cta-section py-24 md:py-32" id="connect">
+<div class="max-w-3xl mx-auto px-6 md:px-8 text-center relative z-10">
+    <div class="scroll-reveal">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-headline font-extrabold text-white mb-6 leading-tight">Ready to build<br/>something real?</h2>
+        <p class="text-lg md:text-xl text-white/40 mb-12 max-w-xl mx-auto">Currently open to AI engineering roles and research collaborations. I don't bring demos — I bring systems that ship.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+            <a class="cta-button cta-button-primary text-lg" href="mailto:valluruchetanreddy@gmail.com">
+                <span class="material-symbols-outlined">mail</span>
+                valluruchetanreddy@gmail.com
+            </a>
+        </div>
+
+        <div class="flex justify-center items-center gap-6">
+            <a href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 font-semibold text-sm transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+            </a>
+            <a href="https://github.com/chetanreddyv" target="_blank" class="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/5 border border-white/10 text-white/70 hover:text-white hover:bg-white/10 font-semibold text-sm transition-all">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                GitHub
+            </a>
+
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-8 border-t border-slate-200/50 bg-white">
+<div class="flex flex-col md:flex-row justify-between items-center px-6 md:px-8 max-w-7xl mx-auto gap-4">
+    <div class="font-bold text-sm text-on-surface tracking-tight">Chetan Valluru</div>
+    <p class="text-xs font-medium text-tertiary">Engineered with precision. Built to ship.</p>
+    <div class="flex gap-4">
+        <a class="text-tertiary hover:text-primary transition-colors text-xs font-medium" href="https://github.com/chetanreddyv" target="_blank">GitHub</a>
+        <a class="text-tertiary hover:text-primary transition-colors text-xs font-medium" href="https://www.linkedin.com/in/chetan-reddy-valluru/" target="_blank">LinkedIn</a>
+    </div>
 </div>
 </footer>
 
 <script>
-    // Smooth scrolling & active state for navigation
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            const targetElement = document.querySelector(targetId);
+    // ==================== COUNTER ANIMATION ====================
+    function animateCounters() {
+        const counters = document.querySelectorAll('.metric-number[data-target]');
+        
+        counters.forEach(counter => {
+            if (counter.dataset.animated) return;
             
-            if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 100;
-                window.scrollTo({
-                    top: offsetTop,
-                    behavior: 'smooth'
-                });
+            const target = parseInt(counter.dataset.target);
+            const suffix = counter.dataset.suffix || '';
+            const duration = 2000;
+            const startTime = performance.now();
+            
+            counter.dataset.animated = 'true';
+            
+            function updateCounter(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(eased * target);
+                
+                counter.textContent = current + suffix;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
             }
+            
+            requestAnimationFrame(updateCounter);
         });
-    });
+    }
 
-    // Scroll reveal animation
+    // ==================== SCROLL REVEAL ====================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -592,6 +1141,11 @@
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('revealed');
+                
+                // Trigger counter animation when metrics come into view
+                if (entry.target.querySelector('.metric-number')) {
+                    setTimeout(animateCounters, 300);
+                }
             }
         });
     }, observerOptions);
@@ -600,24 +1154,95 @@
         observer.observe(el);
     });
 
-    // Copy Email Functionality
-    const copyBtn = document.getElementById('copy-email-btn');
-    if (copyBtn) {
-        copyBtn.addEventListener('click', async () => {
-            try {
-                await navigator.clipboard.writeText('valluruchetanreddy@gmail.com');
-                const originalHtml = copyBtn.innerHTML;
-                copyBtn.innerHTML = '<span class="material-symbols-outlined text-xl text-emerald-500" data-icon="check_circle">check_circle</span> Copied!';
-                copyBtn.classList.add('bg-emerald-50', 'text-emerald-700', 'border', 'border-emerald-200');
-                
-                setTimeout(() => {
-                    copyBtn.innerHTML = originalHtml;
-                    copyBtn.classList.remove('bg-emerald-50', 'text-emerald-700', 'border', 'border-emerald-200');
-                }, 2000);
-            } catch (err) {
-                console.error('Failed to copy text: ', err);
+    // ==================== NAVIGATION BEHAVIOR ====================
+    const nav = document.getElementById('main-nav');
+    const navLogo = document.getElementById('nav-logo');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section[id]');
+    
+    // Nav background on scroll
+    function updateNav() {
+        const scrollY = window.scrollY;
+        const heroHeight = document.getElementById('hero').offsetHeight;
+        
+        if (scrollY > 80) {
+            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.style.backdropFilter = 'blur(20px)';
+            nav.style.boxShadow = '0 1px 3px rgba(0,0,0,0.08)';
+            navLogo.classList.remove('text-white');
+            navLogo.classList.add('text-on-surface');
+            navLinks.forEach(link => {
+                link.classList.remove('text-white/70', 'hover:text-white');
+                link.classList.add('text-tertiary', 'hover:text-primary');
+            });
+            // Update social icons
+            document.querySelectorAll('nav a[aria-label]').forEach(icon => {
+                icon.classList.remove('text-white/60', 'hover:text-white', 'hover:bg-white/10');
+                icon.classList.add('text-tertiary', 'hover:text-primary', 'hover:bg-primary/5');
+            });
+
+        } else {
+            nav.style.background = 'transparent';
+            nav.style.backdropFilter = 'none';
+            nav.style.boxShadow = 'none';
+            navLogo.classList.add('text-white');
+            navLogo.classList.remove('text-on-surface');
+            navLinks.forEach(link => {
+                link.classList.add('text-white/70', 'hover:text-white');
+                link.classList.remove('text-tertiary', 'hover:text-primary');
+            });
+            document.querySelectorAll('nav a[aria-label]').forEach(icon => {
+                icon.classList.add('text-white/60', 'hover:text-white', 'hover:bg-white/10');
+                icon.classList.remove('text-tertiary', 'hover:text-primary', 'hover:bg-primary/5');
+            });
+
+        }
+    }
+    
+    // Active section highlighting
+    function updateActiveSection() {
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 200;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
             }
         });
     }
+    
+    window.addEventListener('scroll', () => {
+        updateNav();
+        updateActiveSection();
+    }, { passive: true });
+    
+    // Initial call
+    updateNav();
+
+    // ==================== SMOOTH SCROLLING ====================
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const offsetTop = targetElement.offsetTop - 80;
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 </script>
 </body></html>
